@@ -1,0 +1,14 @@
+.client-logo{
+    margin: 0 auto;
+    margin-bottom: 200px;
+    width: 1090px;
+    height: 100px;
+}
+
+.client-logo-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+

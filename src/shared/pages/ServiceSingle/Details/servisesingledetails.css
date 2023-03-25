@@ -1,0 +1,25 @@
+.servisesingle-details {
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.servisesingle-details-title {
+    width: 448px;
+}
+
+.servisesingle-details-text-block {
+    width: 655px;
+}
+
+.servisesingle-details-title-h3 {
+    margin-bottom: 35px;
+    color: #CDA274;
+}
+
+.servisesingle-details-p {
+    margin-bottom: 28px;
+}
+.servisesingle-details-p:last-child{
+    margin-bottom: 0;
+}

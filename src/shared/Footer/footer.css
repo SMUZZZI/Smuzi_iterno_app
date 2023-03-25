@@ -1,0 +1,20 @@
+
+.footer-main{
+    margin-bottom: 134px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-copyright{
+    margin-bottom: 46px;
+
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+    color: #4D5053;
+}

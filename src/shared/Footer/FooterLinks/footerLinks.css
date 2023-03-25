@@ -1,0 +1,14 @@
+.footerlink-logo svg{
+    margin-bottom: 18px;
+}
+
+.footerlink-p {
+    margin-bottom: 31px;
+    width: 393px;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+    color: #4D5053;
+}

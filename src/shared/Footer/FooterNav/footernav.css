@@ -1,0 +1,13 @@
+.footernav{
+    display: flex;
+
+    width: 100%;
+
+    justify-content: space-around;
+}
+
+.footernav-title{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 125%;
+}

@@ -1,0 +1,7 @@
+.projectlist{
+    margin-bottom: 200px;
+}
+.projectlist-block{
+    display: flex;
+    justify-content: space-between;
+}

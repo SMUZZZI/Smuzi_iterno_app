@@ -1,0 +1,34 @@
+.toportfolio {
+    margin-bottom: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toportfolio-img {
+    width: 600px;
+    height: 377px;
+
+    background-image: url(../img/servicesinglePortfolio.jpg);
+
+    border-radius: 70px;
+}
+
+.toportfolio-content{
+    width: 518px;
+}
+
+.toportfolio-title {
+    margin-bottom: 11px;
+}
+
+.toportfolio-p {
+    margin-bottom: 64px;
+}
+
+.toportfolio-link{
+    padding: 26px 40px;
+    padding-right: 65px;
+    box-shadow: 0px 10px 20px rgba(192, 192, 192, 0.35);
+}

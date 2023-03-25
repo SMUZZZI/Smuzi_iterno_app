@@ -1,0 +1,43 @@
+
+.projecttabs-list {
+    margin: 0 auto;
+    margin-bottom: 200px;
+box-sizing: border-box;
+    padding: 27px 0;
+
+    width: 880px;
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px solid #CDA274;
+    border-radius: 18px;
+}
+
+.projecttabs-btn {
+    padding: 26px 66px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 125%;
+
+    color: #292F36;
+
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.projecttabs-btn-active {
+    background: #CDA274;
+    border-radius: 18px;
+
+    color: #fff;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+.projecttabs-btn:hover{
+    color: #CDA274;
+}
+.projecttabs-btn-active:hover{
+    color: #fff;
+}

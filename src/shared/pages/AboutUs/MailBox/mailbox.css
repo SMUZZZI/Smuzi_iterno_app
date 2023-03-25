@@ -1,0 +1,78 @@
+.mailbox{
+    margin-bottom: 200px;
+}
+
+.mailbox-container{
+    margin: 0 auto;
+    width: 796px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mailbox-title{
+    margin-bottom: 77px;
+    text-align: center;
+}
+
+.mailbox-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mailbox-form input{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+    border: none;
+    border-bottom: 1px solid #000;
+}
+.mailbox-form input::placeholder{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+    color: #4D5053;
+}
+
+.mailbox-form-block-one{
+    margin-bottom: 57px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mailbox-form-name{
+    width: 378px;
+    height: 45px;
+}
+.mailbox-form-mail{
+    width: 378px;
+    height: 45px;
+}
+
+.mailbox-form-comment{
+    margin-bottom: 77px;
+    width: 796px;
+    height: 238px;
+
+    border: none;
+    border-bottom: 1px solid #000;
+
+    resize: none;
+}
+.mailbox-form-comment::placeholder{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+    color: #4D5053;
+}
+.mailbox-form-btn{
+    box-shadow: 0px 10px 20px rgba(192, 192, 192, 0.35);
+}
+.mailbox-form-btn svg{
+    top: 29px;
+}

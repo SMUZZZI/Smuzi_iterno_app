@@ -1,0 +1,60 @@
+.blogsingle {
+    margin-bottom: 200px;
+}
+
+.blogsingle-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogsingle-content {
+    width: 804px;
+}
+
+.blogsingle-quote {
+    margin-bottom: 27px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 799px;
+    height: 267px;
+
+    background: #F4F0EC;
+    border-radius: 50px;
+}
+
+.blogsingle-quote-sign {
+    position: relative;
+
+    top: -50px;
+
+    font-weight: 400;
+    font-size: 200px;
+    line-height: 50%;
+
+    color: #CDA274;
+
+    transform: rotate(-180deg);
+}
+
+.blogsingle-quote-p {
+    width: 345px;
+    position: relative;
+    top: -20px;
+
+    text-align: center;
+
+    font-style: italic;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 125%;
+
+    color: #CDA274;
+}
+
+.blogsingle-nav{
+    width: 345px;
+}

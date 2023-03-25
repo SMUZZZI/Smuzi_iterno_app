@@ -1,0 +1,31 @@
+.whatwedo{
+    margin-bottom: 200px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.whatwedo-item{
+    width: 450px;
+}
+.whatwedo-title{
+    margin-bottom: 23px;
+}
+.whatwedo-p{
+    margin-bottom: 61px;
+}
+
+.whatwedo-btn{
+    padding: 26px 41px;
+    box-shadow: 0px 10px 20px rgba(192, 192, 192, 0.35);
+}
+
+.whatwedo-item:last-child{
+    width: 659px;
+    height: 377px;
+
+    background-image: url(../img/whatwedo.jpg);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 70px;
+}

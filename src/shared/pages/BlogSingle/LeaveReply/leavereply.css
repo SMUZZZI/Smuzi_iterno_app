@@ -1,0 +1,68 @@
+.leavereply-input-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leavereply-input {
+    width: 380px;
+    height: 45px;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+
+    border: none;
+    border-bottom: 1px solid black;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+}
+
+.leavereply-input::placeholder {
+    position: absolute;
+
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+    color: #4D5053;
+}
+
+.leavereply-input-comment {
+    width: 800px;
+    height: 175px;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 60px;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+    border: none;
+    border-bottom: 1px solid black;
+
+    resize: none;
+}
+
+.leavereply-input-comment::placeholder {
+    position: absolute;
+
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+    color: #4D5053;
+}
+
+.leavereply-btn {
+    box-shadow: 0px 10px 20px rgba(192, 192, 192, 0.35);
+}
+
+.leavereply-btn svg{
+    top: 29px;
+}

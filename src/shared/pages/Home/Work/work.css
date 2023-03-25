@@ -1,0 +1,19 @@
+.work{
+    margin-bottom: 200px;
+}
+
+.work-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.work-list-item{
+    width: 358px;
+    text-align: center;
+}
+.work-title{
+    margin-bottom: 20px;
+}
+.work-p{
+    margin-bottom: 52px;
+}

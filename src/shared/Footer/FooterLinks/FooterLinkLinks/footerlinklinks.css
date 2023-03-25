@@ -1,0 +1,10 @@
+.footerlinkLinks{
+    display: flex;
+}
+
+.footerlinkLinks-item{
+    margin-right: 54px;
+}
+.footerlinkLinks-item:last-child{
+    margin-right: 0;
+}

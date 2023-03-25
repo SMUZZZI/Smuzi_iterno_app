@@ -1,0 +1,37 @@
+.testimonial-Item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
+    height: 340px;
+    background-color: #fff;
+    border-radius: 25px;
+    margin-right: 16px;
+}
+.testimonial-Item:last-child{
+    margin: 0;
+}
+
+.testimonial-Item-content{
+    margin-top: 53px;
+    width: 296px;
+}
+
+.person{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.person-photo{
+    margin-right: 23px;
+    width: 77px;
+    height: 77px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.person-location{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    color: #4D5053;
+}

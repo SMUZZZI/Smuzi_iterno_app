@@ -1,0 +1,30 @@
+.aboutusresult{
+    margin-bottom: 200px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutusresult-item{
+    width: 450px;
+}
+.aboutusresult-title{
+    margin-bottom: 23px;
+}
+.aboutusresult-p{
+    margin-bottom: 61px;
+}
+
+.aboutusresult-btn{
+    padding: 26px 41px;
+}
+
+.aboutusresult-item:first-child{
+    width: 659px;
+    height: 377px;
+
+    background-image: url(../img/Result.jpg);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 70px;
+}

@@ -1,0 +1,251 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loader-container {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.loader {
+  color: rgb(187, 187, 187);
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: absolute;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.3s infinite linear;
+  transform: translateZ(0);
+}
+.loader-container-project {
+  position: relative;
+  left: 50%;
+}
+
+@keyframes mulShdSpin {
+
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em,
+      2em -2em 0 0em, 3em 0 0 -1em,
+      2em 2em 0 -1em, 0 3em 0 -1em,
+      -2em 2em 0 -1em, -3em 0 0 -1em,
+      -2em -2em 0 0;
+  }
+
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em,
+      3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em,
+      -2em 2em 0 -1em, -3em 0 0 -1em,
+      -2em -2em 0 -1em;
+  }
+
+  25% {
+    box-shadow: 0 -3em 0 -0.5em,
+      2em -2em 0 0, 3em 0 0 0.2em,
+      2em 2em 0 0, 0 3em 0 -1em,
+      -2em 2em 0 -1em, -3em 0 0 -1em,
+      -2em -2em 0 -1em;
+  }
+
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+      3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em,
+      -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+      3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em,
+      -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+      3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0,
+      -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em,
+      3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em,
+      -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em,
+      3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em,
+      -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+
+
+/* btn and links */
+
+.btn {
+  position: relative;
+
+  padding: 26px 48px;
+  padding-right: 65px;
+  border: none;
+  border-radius: 18px;
+  background-color: #292F36;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+  cursor: pointer;
+  transition: background-color .1s ease-in-out;
+}
+
+.btn svg {
+  position: absolute;
+  top: 30px;
+  margin-left: 15px;
+  color: #CDA274;
+  transition: color .1s ease-in-out, margin-left .1s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #CDA274;
+}
+
+.btn:hover svg {
+  margin-left: 20px;
+  color: #292F36;
+}
+
+
+.btn-short {
+  position: relative;
+  padding: 26px 31px;
+  padding-right: 65px;
+  border: none;
+  border-radius: 18px;
+  background-color: #292F36;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+  cursor: pointer;
+  transition: background-color .1s ease-in-out;
+}
+
+.btn-short svg {
+  position: absolute;
+  top: 30px;
+  margin-left: 15px;
+  color: #CDA274;
+  transition: color .1s ease-in-out, margin-left .1s ease-in-out;
+}
+
+.btn-short:hover {
+  background-color: #CDA274;
+}
+
+.btn-short:hover svg {
+  margin-left: 20px;
+  color: #292F36;
+}
+
+
+.link-black-gray {
+  position: relative;
+  color: #4D5053;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+
+  transition: color .1s ease-in-out;
+}
+
+.link-black-gray svg {
+  position: absolute;
+  top: 5px;
+  margin-left: 12px;
+  color: #CDA274;
+  transition: color .1s ease-in-out, margin-left .1s ease-in-out;
+}
+
+.link-black-gray:hover {
+  color: #CDA274;
+}
+
+.link-black-gray:hover svg {
+  color: #292F36;
+  margin-left: 18px;
+}
+
+.circle-btn {
+  color: #F4F0EC;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: color .1s ease-in-out;
+}
+.circle-btn path{
+  color: #292F36;
+  transition: color .1s ease-in-out;
+}
+
+.circle-btn:hover {
+  color: #CDA274;
+}
+.circle-btn:hover path {
+  color: #fff;
+}
+
+/* titles */
+
+.title-h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 125%;
+  color: #292F36;
+}
+
+.title-h2-small {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 125%;
+  color: #292F36;
+}
+
+.title-h3 {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 125%;
+
+  color: #292F36;
+}
+
+.title-h3-small {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+  color: #292F36;
+}
+
+/* text */
+
+.p-black {
+  margin: 0;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.p-black-gray {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+  color: #4D5053;
+}

@@ -1,0 +1,27 @@
+.services-service{
+    margin-bottom: 200px;
+}
+
+.services-service-list{
+    margin: 0 auto;
+    width: 1200px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-service-item{
+    width: 398px;
+    height: 391px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services-service-item:nth-child(5n){
+    background: #F4F0EC;
+    border-radius: 30px;
+}

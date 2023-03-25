@@ -1,0 +1,24 @@
+.about-us{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+.about-us-bg{
+    background-image: url("../img/AboutUs.jpg");
+    width: 653px;
+    height: 700px;
+    border-radius: 0px 326.5px 0 123px;
+}
+
+.about-us-content{
+    margin-top: 43px;
+    width: 472px;
+}
+
+.about-us-title{
+    margin-bottom: 33px;
+}
+.about-us-p{
+    margin-bottom: 45px;
+}

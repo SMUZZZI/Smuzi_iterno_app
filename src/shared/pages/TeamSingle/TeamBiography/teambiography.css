@@ -1,0 +1,116 @@
+.teambiography {
+    margin-bottom: 200px;
+}
+
+.teambiography-title {
+    margin-bottom: 18px;
+}
+
+.teambiography-biography {
+    margin-bottom: 45px;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+    color: #4D5053;
+}
+
+
+
+.teambiography-qna {
+    width: 529px;
+}
+
+.teambiography-qna-title {
+    margin-bottom: 12px;
+}
+
+.teambiography-qna-p {
+    margin-bottom: 19px;
+}
+
+
+
+.teambiography-qna-item {
+    margin-bottom: 30px;
+    padding: 24px 22px;
+    background-color: #fff;
+    border: 1px solid #CDA274;
+    border-radius: 18px;
+
+    transition: background-color .1s ease-in-out;
+
+    cursor: pointer;
+
+}
+
+.teambiography-qna-item:last-child {
+    margin-bottom: 0;
+}
+
+.teambiography-qna-item-open {
+    background-color: #F4F0EC;
+    border: 1px solid #F4F0EC;
+}
+
+
+.teambiography-qna-item-title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teambiography-qna-item-icon {
+    width: 44px;
+    height: 44px;
+
+    background-color: #F4F0EC;
+
+    border-radius: 50%;
+}
+
+.teambiography-qna-item-icon-line {
+    position: relative;
+    top: 6px;
+    left: 13px;
+
+    display: inline-block;
+    width: 18px;
+    border: 1px solid #292F36;
+}
+
+.teambiography-qna-item-icon-line:last-child{
+    transform: rotate(90deg);
+    top: 6px;
+    left: -7px;
+    transition: transform .2s ease-in-out;
+}
+
+.teambiography-qna-item-open .teambiography-qna-item-icon-line:last-child{
+    transform: rotate(0);
+}
+
+.teambiography-qna-item-open .teambiography-qna-item-icon {
+    background-color: #fff;
+}
+
+.teambiography-qna-item-title {
+    font-family: 'Jost';
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 125%;
+}
+
+.teambiography-qna-item-open .teambiography-qna-item-title-block {
+    margin-bottom: 25px;
+}
+
+.teambiography-qna-item-p {
+    display: none;
+}
+
+.teambiography-qna-item-open .teambiography-qna-item-p {
+    display: block;
+}

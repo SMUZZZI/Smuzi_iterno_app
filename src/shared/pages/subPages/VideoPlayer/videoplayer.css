@@ -1,0 +1,13 @@
+.videoplayer-container {
+    margin-bottom: 200px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 70px;
+
+    overflow: hidden;
+}
+
+.videoplayer {
+    object-fit: fill;
+}

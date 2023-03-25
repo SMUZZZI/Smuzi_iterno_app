@@ -1,0 +1,21 @@
+.footernavcontact-item-title{
+    margin-bottom: 26px;
+    
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 125%;
+}
+.footernavcontact-item-p{
+    width: 258px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 300%;
+
+    color: #4D5053;
+}
+.footernavcontact-item-p:hover{
+    color: #CDA274;
+}
+.footernavcontact-item:nth-child(2n) .footernavcontact-item-p{
+    line-height: 150%;
+}

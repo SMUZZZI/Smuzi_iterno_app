@@ -1,0 +1,153 @@
+.contactuspage-title {
+    margin: 0 auto;
+    margin-bottom: 80px;
+    width: 683px;
+    text-align: center;
+}
+
+.contactuspage-list {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 150px;
+}
+
+.contactuspage-list-item:first-child {
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+
+    padding: 76px 32px;
+    background-color: #F4F0EC;
+
+    border-radius: 50px;
+}
+
+.contactuspage-list-item-link {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+
+    color: #4D5053;
+
+    transition: color .1s ease-in-out;
+}
+
+.contactuspage-list-item-link:hover{
+    color: #CDA274;
+}
+
+.contactuspage-list-item-link:last-child {
+    margin-bottom: 47px;
+}
+
+.contactuspage-list-item-link svg {
+    margin-right: 15px;
+}
+
+
+.contactuspage-list-item-social-block {
+    display: flex;
+    justify-content: space-between;
+
+    width: 146px;
+}
+
+
+
+.contactuspage-form {
+    width: 797px;
+}
+
+.contactuspage-input-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactuspage-input {
+    width: 380px;
+    height: 45px;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+
+    border: none;
+    border-bottom: 1px solid black;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+}
+
+.contactuspage-input::placeholder {
+    position: absolute;
+
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+    color: #4D5053;
+}
+
+.contactuspage-input-comment {
+    width: 800px;
+    height: 175px;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 60px;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+    border: none;
+    border-bottom: 1px solid black;
+
+    resize: none;
+}
+
+.contactuspage-input-comment::placeholder {
+    position: absolute;
+
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+    color: #4D5053;
+}
+
+.contactuspage-btn-block {
+    display: flex;
+    justify-content: right;
+}
+
+.contactuspage-btn {
+    box-shadow: 0px 10px 20px rgba(192, 192, 192, 0.35);
+}
+
+.contactuspage-btn svg {
+    top: 28px;
+}
+
+.contactuspage-map-container {
+    margin: 0 auto;
+    margin-bottom: 200px;
+
+    width: 1200px;
+    height: 500px;
+
+    background: #292F36;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.25);
+
+    border-radius: 70px;
+
+    overflow: hidden;
+}

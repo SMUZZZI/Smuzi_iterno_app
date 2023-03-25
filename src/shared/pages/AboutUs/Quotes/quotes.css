@@ -1,0 +1,50 @@
+.quotes{
+    margin: 0 auto;
+    margin-bottom: 200px;
+
+    width: 875.5px;
+    height: 428px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../img/quotes-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.quotes-conctent{
+    padding: 80px 100px;
+    width: 751px;
+}
+
+.quotes-decor{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 85px;
+    line-height: 125%;
+
+    text-align: center;
+}
+
+.quotes-title{
+    margin-bottom: 34px;
+
+    font-style: italic;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 125%;
+
+    text-align: center;
+}
+.quotes-p{
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 150%;
+
+    color: #4D5053;
+}

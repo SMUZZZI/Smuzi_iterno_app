@@ -1,0 +1,60 @@
+.counter{
+    margin-bottom: 200px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    height: 457px;
+
+    background-color: #F4F0EC;
+}
+.counter-bg{
+    position: absolute;
+    left: -360px;
+    
+    width: 1911px;
+    height: 457px;
+    
+    background-color: #F4F0EC;
+    z-index: -1;
+}
+.counter-block{
+    display: flex;
+    justify-content: space-between;
+    width: 1082px;
+}
+
+.counter-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    padding-right: 100px;
+}
+.counter-item:last-child{
+    padding: 0;
+}
+
+.counter-item::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    background-color: #CDA274;
+}
+.counter-item:last-child::after{
+    background-color: transparent;
+}
+
+.counter-numbers{
+    font-weight: 400;
+    font-size: 85px;
+    line-height: 125%;
+
+    color: #CDA274;
+}

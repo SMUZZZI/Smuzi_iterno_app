@@ -1,0 +1,30 @@
+.projectlist-item {
+    margin-bottom: 35px;
+
+    width: 585px;
+    
+}
+
+.projectlist-item:last-child {
+    margin-bottom: 0;
+}
+
+.projectlist-item-img {
+    margin-bottom: 24px;
+    width: 585px;
+    min-height: 585px;
+    max-height: 947px;
+
+    background-color: #f4f4f4;
+
+    object-fit: cover;
+}
+
+.projectlist-item-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectlist-item-title {
+    margin-bottom: 4px;
+}

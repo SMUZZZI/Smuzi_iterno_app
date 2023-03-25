@@ -1,0 +1,58 @@
+.aboutus-team{
+    margin-bottom: 200px;
+    position: relative;
+    left: -350px;
+    width: 1901px;
+    height: 968px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #F4F0EC;
+}
+
+.aboutus-team-content{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutus-team-title{
+    margin-bottom: 40px;
+    width: 547px;
+    text-align: center;
+}
+
+.aboutus-team-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.aboutus-team-item{
+    position: relative;
+    overflow: hidden;
+
+    width: 283.55px;
+    height: 433px;
+    border-radius: 30px;
+}
+
+.aboutus-item-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: background-color .1s ease-in-out;
+}
+
+.aboutus-team-item:hover .aboutus-item-bg{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.aboutus-team-item-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

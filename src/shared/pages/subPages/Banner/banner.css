@@ -1,0 +1,27 @@
+.banner{
+    margin-top: 45px;
+    margin-bottom: 200px;
+    position: relative;
+    left: -360px;
+    width: 1911px;
+    height: 356px;
+    background-position: center center;
+    background-size: cover;
+
+    z-index: 0;
+}
+.banner-tag{
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 503px;
+    height: 178px;
+    bottom: 0;
+    left: 710px;
+    background-color: #fff;
+    border-radius: 37px 37px 0px 0px;
+}

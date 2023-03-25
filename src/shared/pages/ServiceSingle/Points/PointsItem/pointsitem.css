@@ -1,0 +1,24 @@
+.pointsitem-title {
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 125%;
+}
+
+.pointsitem-item {
+    display: flex;
+    align-items: center;
+}
+
+.pointsitem-num {
+    margin-right: 15px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 125%;
+
+    color: #CDA274;
+}
+
+.pointsitem-p {
+    line-height: 270%;
+}

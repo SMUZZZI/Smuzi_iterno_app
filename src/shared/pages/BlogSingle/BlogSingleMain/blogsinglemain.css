@@ -1,0 +1,41 @@
+.blogsinglemain {
+    margin-bottom: 35px;
+}
+
+.blogsinglemain-title {
+    margin-bottom: 21px;
+}
+
+.blogsinglemain-img-block {
+    margin-bottom: 46px;
+
+    width: 804px;
+    height: 539px;
+
+    background: #C4C4C4;
+    border-radius: 50px;
+
+    overflow: hidden;
+}
+
+.blogsinglemain-img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.blogsinglemain-tags {
+    margin-bottom: 48px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogsinglemain-tag-p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #4D5053;
+}

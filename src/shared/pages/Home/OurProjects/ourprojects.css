@@ -1,0 +1,25 @@
+.outprojects{
+    margin-bottom: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ourprojects-title{
+    margin-bottom: 8px;
+}
+.ourprojects-main-p{
+    margin-bottom: 53px;
+    width: 737px;
+    text-align: center;
+}
+
+.ourprojects-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}

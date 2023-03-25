@@ -1,0 +1,17 @@
+.footernavservices-item-title{
+    margin-bottom: 26px;
+
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 125%;
+}
+.footernavservices-item-p{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 300%;
+
+    color: #4D5053;
+}
+.footernavservices-item-p:hover{
+    color: #CDA274;
+}
