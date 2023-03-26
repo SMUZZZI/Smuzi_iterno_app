@@ -31,9 +31,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchAuthAdmin())
-  }, []);
-
-  return (
+  }, []); return (
     <div className='container'>
       {
           <Suspense fallback={
