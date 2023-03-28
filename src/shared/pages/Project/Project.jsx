@@ -10,6 +10,7 @@ import Pagination from '../subPages/Pagination/Pagination';
 
 
 import projectBg from "./img/projectbg.jpg"
+import ProjectBlank from '../subPages/ProjectBlank/ProjectBlank';
 const background = {
     name: "Our Project",
     tag: "Home / Project",
@@ -22,7 +23,7 @@ function Project() {
     const data = useParams();
 
     const projectData = useSelector(state => state.project)
-    const isProjectLoading = projectData.status === "loading" || "error";
+    const isProjectLoading = projectData.status === "loading" | "error";
 
     useEffect(() => {
         dispatch(fetchProjectParam("bathroom"))
@@ -92,7 +93,7 @@ function Project() {
             </section>
             {
                 isProjectLoading ?
-                    <div> Loading...</div>
+                    <ProjectBlank data={[1,2,3,4,5,6]}/>
                     :
                     <Routes>
                         <Route path="/*" element={<ProjectList

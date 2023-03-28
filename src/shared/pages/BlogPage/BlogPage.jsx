@@ -9,6 +9,8 @@ import AllPosts from './AllPosts/AllPosts'
 import Pagination from '../subPages/Pagination/Pagination'
 
 import backgroundImg from "./img/blogPageBanner.jpg"
+import BlogBlank from '../subPages/BlogBlank/BlogBlank';
+import LastPostBlank from './LastPost/LastPostBlank/LastPostBlank';
 
 const background = {
     name: "Articles & News",
@@ -21,7 +23,7 @@ function BlogPage() {
 
     const dispath = useDispatch()
     const blogData = useSelector(state => state.blog)
-    const isBlogLoading = blogData.status === "loading" || "error";
+    const isBlogLoading = blogData.status === "loading" | "error";
 
     useEffect(() => {
         dispath(fetchBlog())
@@ -41,7 +43,10 @@ function BlogPage() {
             <Banner background={background} />
             {
                 isBlogLoading ?
-                    <div>Loading...</div>
+                <div className='main-blank'>
+                    <LastPostBlank />
+                    <BlogBlank data={[1,2,3,4,5,6,7,8,9]} />
+                </div>
                     :
                     <>
                         <LastPost data={blogData.items[blogData.items.length - 1]} />
