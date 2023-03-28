@@ -10,7 +10,7 @@ function Pagination({ postPerPage, totalPosts, paginate }) {
     }
 
     const [currentNum, setCurrentNum] = useState(1);
-    const [numPerPage, setNumPerPage] = useState(2);
+    const [numPerPage] = useState(2);
     const indexOfLastNum = currentNum + numPerPage;
     const indexOfFirstNum = currentNum - 1;
 
@@ -19,7 +19,7 @@ function Pagination({ postPerPage, totalPosts, paginate }) {
 
     //prev
     let togglePrevClassCheck = "";
-    (currentNum != 1) ? togglePrevClassCheck = " pagination-item-active" : togglePrevClassCheck = "";
+    (currentNum !== 1) ? togglePrevClassCheck = " pagination-item-active" : togglePrevClassCheck = "";
     //next
     let toggleNextClassCheck = "";
     (currentNum >= pageNum.length - 2) ? toggleNextClassCheck = "" : toggleNextClassCheck = " pagination-item-active";
