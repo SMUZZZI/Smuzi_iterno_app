@@ -23,7 +23,7 @@ function Project() {
     const data = useParams();
 
     const projectData = useSelector(state => state.project)
-    const isProjectLoading = projectData.status === "loading" | "error";
+    const isProjectLoading = projectData.status === "loading" || "error";
 
     useEffect(() => {
         dispatch(fetchProjectParam("bathroom"))

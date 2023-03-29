@@ -23,7 +23,7 @@ function BlogPage() {
 
     const dispath = useDispatch()
     const blogData = useSelector(state => state.blog)
-    const isBlogLoading = blogData.status === "loading" | "error";
+    const isBlogLoading = blogData.status === "loading" || "error";
 
     useEffect(() => {
         dispath(fetchBlog())

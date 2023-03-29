@@ -23,10 +23,10 @@ function Main() {
 
     const dispath = useDispatch()
     const blogData = useSelector(state => state.blog)
-    const isBlogLoading = blogData.status === "loading" | "error";
+    const isBlogLoading = blogData.status === "loading" || "error";
 
     const projectData = useSelector(state => state.project)
-    const isProjectLoading = projectData.status === "loading" | "error";
+    const isProjectLoading = projectData.status === "loading" || "error";
 
     useEffect(() => {
         dispath(fetchBlog())
