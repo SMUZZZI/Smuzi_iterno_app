@@ -24,39 +24,42 @@ const AdminPage = React.lazy(() => import("../shared/adminPage/AdminPage"))
 const AdminLogin = React.lazy(() => import("../shared/adminPage/AdminLogin/AdminLogin"))
 
 function App() {
-  
+
   const dispatch = useDispatch()
 
-  const isAuth = useSelector(selectIsAuth)
+  const Auth = useSelector(selectIsAuth)
+  const isAuth = Auth.status === true;
 
   useEffect(() => {
     dispatch(fetchAuthAdmin())
-  }, []); return (
+  }, []);
+
+  return (
     <div className='container'>
       {
-          <Suspense fallback={
-            <div className="loader-container">
-              <span class="loader"></span>
-            </div>
-          }>
-            <Header />
-            <Routes>
-              <Route path="/" element={<Main />} />
-              <Route path="/aboutus" element={<AboutUsPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/single" element={<ServiceSingle />} />
-              <Route path="/project/*" element={<Project />} />
-              <Route path="/project/id=/:id" element={<ProjectDetails />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/blog/:id" element={<BlogSingle />} />
-              <Route path="/team" element={<TeamPage />} />
-              <Route path="/team/details" element={<TeamSingle />} />
-              <Route path="/contactus" element={<ContactUsPage />} />
-              <Route path="/admin" element={<AdminPage />} />
-              <Route path="/login" element={<AdminLogin />} />
-            </Routes>
-            <Footer />
-          </Suspense>
+        <Suspense fallback={
+          <div className="loader-container">
+            <span class="loader"></span>
+          </div>
+        }>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/aboutus" element={<AboutUsPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/single" element={<ServiceSingle />} />
+            <Route path="/project/*" element={<Project />} />
+            <Route path="/project/id=/:id" element={<ProjectDetails />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:id" element={<BlogSingle />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/team/details" element={<TeamSingle />} />
+            <Route path="/contactus" element={<ContactUsPage />} />
+            <Route path="/admin/*" element={<AdminPage />} />
+            <Route path="/login" element={<AdminLogin />} />
+          </Routes>
+          <Footer />
+        </Suspense>
       }
     </div>
   );

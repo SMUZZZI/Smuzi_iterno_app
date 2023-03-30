@@ -11,6 +11,7 @@ import WhatWeDo from './WhatWeDo/WhatWeDo';
 
 //banner background image
 import backgroundImg from "./img/aboutusP.jpg"
+import TeamPageListBlank from '../subPages/TeamPageListBlank/TeamPageListBlank';
 const background={
   name: "About Us",
   tag: "Home / About Us",
@@ -19,7 +20,10 @@ const background={
 
 function AboutUsPage() {
 
-  const aboutUsData = useSelector(state => state.repos.items.team)
+  // const aboutUsData = useSelector(state => state.repos.items.team)
+  const aboutUsData = [1,2,3];
+
+  const isTeamLoading = true
 
   return (
     <main className='about-usP'>
@@ -27,7 +31,12 @@ function AboutUsPage() {
         <Quotes />
         <WhatWeDo />
         <AboutUsResult />
+        {
+          isTeamLoading ?
+          <TeamPageListBlank data={[1,2,3,4]} /> 
+          :
         <AboutUsTeam data={aboutUsData} title={"What the People Thinks About Us"}/>
+        }
         <MailBox />
     </main>
   )

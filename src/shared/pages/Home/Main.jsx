@@ -16,23 +16,25 @@ import Contact from "../subPages/Contact/Contact";
 
 import ProjectBlank from '../subPages/ProjectBlank/ProjectBlank';
 import BlogBlank from '../subPages/BlogBlank/BlogBlank';
-
+import Error from '../subPages/Error/Error';
 
 
 function Main() {
 
     const dispath = useDispatch()
     const blogData = useSelector(state => state.blog)
-    const isBlogLoading = blogData.status === "loading" || "error";
+    const isBlogLoading = blogData.status === "loading";
+    const isBlogError = blogData.status === "error";
 
     const projectData = useSelector(state => state.project)
-    const isProjectLoading = projectData.status === "loading" || "error";
+    const isProjectLoading = projectData.status === "loading";
+    const isProjectError = projectData.status === "error";
 
     useEffect(() => {
         dispath(fetchBlog())
         dispath(fetchProject())
     }, []);
-    console.log(isProjectLoading);
+
     return (
         <main className="main">
             <Hero />
@@ -41,21 +43,27 @@ function Main() {
             <Testimonial />
             <ClientLogo />
             {
-                isProjectLoading ?
-                    <div className="main-blank">
-                        <ProjectBlank data={[1, 2, 3, 4]} />
-                    </div>
+                isProjectError ?
+                    <Error errorStatus={"500"} descr={"Не удалось загрузить проекты"} />
                     :
-                    <OurProjects ourProjects={projectData.items} />
+                    isProjectLoading ?
+                        <div className="main-blank">
+                            <ProjectBlank data={[1, 2, 3, 4]} />
+                        </div>
+                        :
+                        <OurProjects ourProjects={projectData.items} />
             }
             <Counter />
             {
-                isBlogLoading ?
-                    <div className="main-blank">
-                        <BlogBlank data={[1, 2, 3]} />
-                    </div>
+                isBlogError ?
+                    <Error errorStatus={"500"} descr={"Не удалось загрузить посты"} />
                     :
-                    <Blog blogData={blogData.items} />
+                    isBlogLoading ?
+                        <div className="main-blank">
+                            <BlogBlank data={[1, 2, 3]} />
+                        </div>
+                        :
+                        <Blog blogData={blogData.items} />
             }
             <Contact />
         </main>

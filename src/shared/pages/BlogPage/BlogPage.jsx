@@ -9,8 +9,10 @@ import AllPosts from './AllPosts/AllPosts'
 import Pagination from '../subPages/Pagination/Pagination'
 
 import backgroundImg from "./img/blogPageBanner.jpg"
+
 import BlogBlank from '../subPages/BlogBlank/BlogBlank';
 import LastPostBlank from './LastPost/LastPostBlank/LastPostBlank';
+import Error from '../subPages/Error/Error';
 
 const background = {
     name: "Articles & News",
@@ -23,7 +25,8 @@ function BlogPage() {
 
     const dispath = useDispatch()
     const blogData = useSelector(state => state.blog)
-    const isBlogLoading = blogData.status === "loading" || "error";
+    const isBlogLoading = blogData.status === "loading";
+    const isBlogError = blogData.status === "error";
 
     useEffect(() => {
         dispath(fetchBlog())
@@ -31,7 +34,7 @@ function BlogPage() {
 
     const [posts, setPosts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postPerPage, setPostPerPage] = useState(6);
+    const [postPerPage] = useState(6);
 
     const paginate = (pageNum) => {
         setCurrentPage(pageNum);
@@ -42,28 +45,31 @@ function BlogPage() {
         <main className='blogpage'>
             <Banner background={background} />
             {
-                isBlogLoading ?
-                <div className='main-blank'>
-                    <LastPostBlank />
-                    <BlogBlank data={[1,2,3,4,5,6,7,8,9]} />
-                </div>
+                isBlogError ?
+                <Error errorStatus={"500"} descr={"Не удалось загрузить посты"}/>
                     :
-                    <>
-                        <LastPost data={blogData.items[blogData.items.length - 1]} />
-                        <AllPosts
-                            data={blogData.items}
-                            postsData={{
-                                posts,
-                                currentPage,
-                                postPerPage,
-                                setPosts
-                            }} />
-                        <Pagination
-                            postPerPage={postPerPage}
-                            totalPosts={blogData.items.length}
-                            paginate={paginate}
-                        />
-                    </>
+                    isBlogLoading ?
+                        <div className='main-blank'>
+                            <LastPostBlank />
+                            <BlogBlank data={[1, 2, 3, 4, 5, 6, 7, 8, 9]} />
+                        </div>
+                        :
+                        <>
+                            <LastPost data={blogData.items[blogData.items.length - 1]} />
+                            <AllPosts
+                                data={blogData.items}
+                                postsData={{
+                                    posts,
+                                    currentPage,
+                                    postPerPage,
+                                    setPosts
+                                }} />
+                            <Pagination
+                                postPerPage={postPerPage}
+                                totalPosts={blogData.items.length}
+                                paginate={paginate}
+                            />
+                        </>
             }
         </main>
     )

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Routes, Route, Link, useParams } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProjectParam } from '../../slices/project';
 import "./project.css"
@@ -8,9 +8,11 @@ import Banner from '../subPages/Banner/Banner'
 import ProjectList from './ProjectList/ProjectList';
 import Pagination from '../subPages/Pagination/Pagination';
 
-
 import projectBg from "./img/projectbg.jpg"
+
 import ProjectBlank from '../subPages/ProjectBlank/ProjectBlank';
+import Error from '../subPages/Error/Error';
+
 const background = {
     name: "Our Project",
     tag: "Home / Project",
@@ -20,10 +22,10 @@ const background = {
 function Project() {
 
     const dispatch = useDispatch()
-    const data = useParams();
 
     const projectData = useSelector(state => state.project)
-    const isProjectLoading = projectData.status === "loading" || "error";
+    const isProjectLoading = projectData.status === "loading";
+    const isProjectError = projectData.status === "error";
 
     useEffect(() => {
         dispatch(fetchProjectParam("bathroom"))
@@ -31,12 +33,13 @@ function Project() {
 
     const [posts, setPosts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postPerPage, setPostPerPage] = useState(8);
+    const [postPerPage] = useState(8);
 
     const [currentPageBTN, setCurrentPageBTN] = useState(1);
 
+    const URL = window.location.pathname
     useEffect(() => {
-        switch (data) {
+        switch (URL) {
             case "/project/bathroom":
                 setCurrentPageBTN(1)
                 break;
@@ -53,7 +56,7 @@ function Project() {
             default:
                 break;
         }
-    }, [data])
+    }, [URL])
 
     const paginate = (pageNum) => {
         setCurrentPage(pageNum);
@@ -92,19 +95,22 @@ function Project() {
                 </ul>
             </section>
             {
-                isProjectLoading ?
-                    <ProjectBlank data={[1,2,3,4,5,6]}/>
+                isProjectError ?
+                    <Error errorStatus={"500"} descr={"Не удалось загрузить проекты"} />
                     :
-                    <Routes>
-                        <Route path="/*" element={<ProjectList
-                            data={projectData.items}
-                            postsData={{
-                                posts,
-                                currentPage,
-                                postPerPage,
-                                setPosts
-                            }} />} />
-                    </Routes>
+                    isProjectLoading ?
+                        <ProjectBlank data={[1, 2, 3, 4, 5, 6]} />
+                        :
+                        <Routes>
+                            <Route path="/*" element={<ProjectList
+                                data={projectData.items}
+                                postsData={{
+                                    posts,
+                                    currentPage,
+                                    postPerPage,
+                                    setPosts
+                                }} />} />
+                        </Routes>
             }
             <Pagination
                 postPerPage={postPerPage}

@@ -9,13 +9,13 @@ function ProjectBlank({data}) {
         {
             blank.map(i => (
                 <li key={i} className="ourproject-blank">
-            <div className="ourproject-blank-img" />
+            <div className="ourproject-blank-img gradient" />
             <div className="ourproject-blank-info-block">
                 <div className="ourproject-blank-title-block">
-                    <div className="ourproject-blank-title" />
-                    <div className="ourproject-blank-p" />
+                    <div className="ourproject-blank-title gradient" />
+                    <div className="ourproject-blank-p gradient" />
                 </div>
-                <div className='ourproject-blank-link'/>
+                <div className='ourproject-blank-link gradient'/>
             </div>
         </li>
             ))

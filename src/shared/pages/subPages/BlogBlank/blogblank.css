@@ -24,7 +24,7 @@
 
     width: 340px;
     height: 289px;
-    background-color: #C4C4C4;
+    background-color: #d4d4d4;
     border-radius: 45px 45px 0px 0px;
 }
 
@@ -41,14 +41,14 @@
     width: 124px;
     height: 41px;
     border-radius: 8px 8px 8px 0px;
-    background-color: rgb(245, 245, 245);
+    background-color: #e9e9e9;
 }
 
 .blog-blank-title {
     margin-left: 20px;
     width: 300px;
     height: 25px;
-    background-color: #C4C4C4;
+    background-color: #d4d4d4;
 }
 
 .blog-blank-date-block {
@@ -67,12 +67,63 @@
 .blog-blank-date {
     width: 150px;
     height: 18px;
-    background-color: #C4C4C4;
+    background-color: #d4d4d4;
 }
 
 .blog-blank-link {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #C4C4C4;
+    background-color: #d4d4d4;
+}
+
+.gradient-main {
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #e4e4e4;
+    background: linear-gradient(to right, #e4e4e4 8%, #f4f4f4 38%, #e4e4e4 54%);
+    background-size: 1000px 640px;
+    
+    position: relative;
+    
+}
+
+.gradient-img {
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #d4d4d4;
+    background: linear-gradient(to right, #d4d4d4 8%, #e4e4e4 38%, #d4d4d4 54%);
+    background-size: 1000px 640px;
+    
+    position: relative;
+    
+}
+
+.gradient-img-tag {
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #e9e9e9;
+    background: linear-gradient(to right, #e4e4e4 8%, #e9e9e9 38%, #e4e4e4 54%);
+    background-size: 1000px 640px;
+    
+    position: relative;
+    
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
 }
