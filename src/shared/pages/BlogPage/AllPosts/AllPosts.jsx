@@ -14,7 +14,7 @@ function AllPosts({ currentPosts }) {
                     currentPosts.map(i => (
                         <li key={i._id} className="allposts-blog-item">
                             <div className="allposts-blog-img-block">
-                                <img src={`http://localhost:5000${i.img}`} className="allposts-blog-img" />
+                                <img src={`http://45.146.166.237:5000${i.img}`} className="allposts-blog-img" />
                                 <div className="allposts-blog-img-tag">{i.tag}</div>
                             </div>
 

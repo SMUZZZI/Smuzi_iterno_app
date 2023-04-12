@@ -17,7 +17,7 @@ function TeamPageList({ data }) {
           }}>
           <div className='teampagelist-img-block'>
             <div className="teampagelist-item-bg"></div>
-            <img src={`http://localhost:5000${team[i].img}`} className="teampagelist-img" />
+            <img src={`http://45.146.166.237:5000${team[i].img}`} className="teampagelist-img" />
           </div>
         </Link>
 

@@ -10,7 +10,7 @@ function ProjectListItem({data}) {
             {
                 items.map(item => (
                     <li key={item._id} className='projectlist-item'>
-                        <img src={`http://localhost:5000${item.img}`} className="projectlist-item-img" />
+                        <img src={`http://45.146.166.237:5000${item.img}`} className="projectlist-item-img" />
                         <div className='projectlist-item-content'>
                             <div className='projectlist-item-text-content'>
                                 <h3 className='projectlist-item-title title-h3'>{item.title}</h3>

@@ -11,7 +11,7 @@ function LastPost({ data }) {
             <h2 className='lastpost-title-main title-h2-small'>Latest Post</h2>
             <article className='lastpost-container'>
                 <div className="lastpost-img-container">
-                    <img src={`http://localhost:5000${data.img}`} className="lastpost-img" />
+                    <img src={`http://45.146.166.237:5000${data.img}`} className="lastpost-img" />
                 </div>
                 <div className="lastpost-text-block">
                     <h3 className='lastpost-title-post title-h3'>{data.title.slice(0, 30)}...</h3>

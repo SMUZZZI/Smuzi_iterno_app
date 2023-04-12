@@ -16,7 +16,7 @@ function AboutUsTeam({ data, title }) {
                                 window.scrollTo(0, 0);
                             }}>
                             <div className="aboutus-item-bg"></div>
-                            <img src={`http://localhost:5000${data.items[0].img}`} className="aboutus-team-item-img" />
+                            <img src={`http://45.146.166.237:5000${data.items[0].img}`} className="aboutus-team-item-img" />
                         </Link>
                     </li>
                     <li className='aboutus-team-item'>
@@ -25,7 +25,7 @@ function AboutUsTeam({ data, title }) {
                                 window.scrollTo(0, 0);
                             }}>
                             <div className="aboutus-item-bg"></div>
-                            <img src={`http://localhost:5000${data.items[1].img}`} className="aboutus-team-item-img" />
+                            <img src={`http://45.146.166.237:5000${data.items[1].img}`} className="aboutus-team-item-img" />
                         </Link>
                     </li>
                     <li className='aboutus-team-item'>
@@ -34,7 +34,7 @@ function AboutUsTeam({ data, title }) {
                                 window.scrollTo(0, 0);
                             }}>
                             <div className="aboutus-item-bg"></div>
-                            <img src={`http://localhost:5000${data.items[2].img}`} className="aboutus-team-item-img" />
+                            <img src={`http://45.146.166.237:5000${data.items[2].img}`} className="aboutus-team-item-img" />
                         </Link>
                     </li>
                     <li className='aboutus-team-item'>
@@ -43,7 +43,7 @@ function AboutUsTeam({ data, title }) {
                                 window.scrollTo(0, 0);
                             }}>
                             <div className="aboutus-item-bg"></div>
-                            <img src={`http://localhost:5000${data.items[3].img}`} className="aboutus-team-item-img" />
+                            <img src={`http://45.146.166.237:5000${data.items[3].img}`} className="aboutus-team-item-img" />
                         </Link>
                     </li>
                 </ul>
