@@ -9,7 +9,7 @@ import DesignSprints from './DesignSprints/DesignSprints'
 import LeaveReply from './LeaveReply/LeaveReply'
 import BlogSingleAside from './BlogSingleAside/BlogSingleAside'
 
-
+ 
 import backgroundImg from "./img/blogSingleBanner.jpg"
 const background = {
   name: "Blog Details",
@@ -34,7 +34,7 @@ function BlogSingle() {
         console.warn(err);
         alert("Ошибка при получении блога")
       })
-  }, []);
+  }, [id]);
 
   return (
     <main className='blogsingle'>

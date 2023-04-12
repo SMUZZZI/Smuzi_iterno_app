@@ -1,0 +1,103 @@
+.admin-project {
+    margin-top: 100px;
+    margin-bottom: 200px;
+    display: flex;
+}
+
+.admin-project-aside {
+    width: 200px;
+    margin-right: 50px;
+}
+
+.admin-project-aside-item {
+    padding: 5px;
+    margin-bottom: 10px;
+    height: 30px;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+}
+
+.admin-project-aside-item:last-child {
+    margin-bottom: 0;
+}
+
+.admin-project-main {
+    margin-right: 50px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-project-title-form {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-project-title {
+    padding: 5px;
+    width: 500px;
+    height: 30px;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+}
+
+.admin-project-title:first-child {
+    margin-bottom: 10px;
+}
+
+.adminprojectnew-editor {
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+    resize: none;
+}
+
+.admin-project-image-input {
+    margin-bottom: 30px;
+}
+
+.admin-project-preview {
+    margin-bottom: 20px;
+    width: 800px;
+    height: 450px;
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.admin-project-sprints-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-project-titles {
+    margin-bottom: 20px;
+}
+
+.admin-project-sprints {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.admin-project-sprints-done {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #E7E7E7;
+    resize: none;
+}
+
+.admin-project-btn {
+    padding: 20px 48px;
+}
+
+.admin-qna-data {
+    list-style: none;
+}

@@ -2,12 +2,13 @@ import React from 'react'
 import "./teammemberdetail.css"
 
 
-function TeamMemberDetail({ data }) {
+function TeamMemberDetail({ Data }) {
+    const data = Data.data
 
     return (
         <section className='teammemberdetail'>
             <div className="teammemberdetail-img-block">
-                <img src={data.img} className='teammemberdetail-img' />
+                <img src={`http://localhost:5000${data.img}`} className='teammemberdetail-img' />
             </div>
             <div className='teammemberdetail-text-block'>
                 <h2 className='title-h2-small'>{data.name}</h2>

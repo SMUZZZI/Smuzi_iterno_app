@@ -11,39 +11,39 @@ function AboutUsTeam({ data, title }) {
                 <h2 className='aboutus-team-title title-h2-small '>{title}</h2>
                 <ul className='aboutus-team-list'>
                     <li className='aboutus-team-item'>
-                        <Link to="/team/details" state={data[0]}
+                        <Link to={`/team/details/${data.items[0]._id}`}
                             onClick={() => {
                                 window.scrollTo(0, 0);
                             }}>
                             <div className="aboutus-item-bg"></div>
-                            <img src={data[0].img} className="aboutus-team-item-img" />
+                            <img src={`http://localhost:5000${data.items[0].img}`} className="aboutus-team-item-img" />
                         </Link>
                     </li>
                     <li className='aboutus-team-item'>
-                        <Link to="/team/details" state={data[1]}
+                        <Link to={`/team/details/${data.items[1]._id}`}
                             onClick={() => {
                                 window.scrollTo(0, 0);
                             }}>
                             <div className="aboutus-item-bg"></div>
-                            <img src={data[1].img} className="aboutus-team-item-img" />
+                            <img src={`http://localhost:5000${data.items[1].img}`} className="aboutus-team-item-img" />
                         </Link>
                     </li>
                     <li className='aboutus-team-item'>
-                        <Link to="/team/details" state={data[2]}
+                        <Link to={`/team/details/${data.items[2]._id}`}
                             onClick={() => {
                                 window.scrollTo(0, 0);
                             }}>
                             <div className="aboutus-item-bg"></div>
-                            <img src={data[2].img} className="aboutus-team-item-img" />
+                            <img src={`http://localhost:5000${data.items[2].img}`} className="aboutus-team-item-img" />
                         </Link>
                     </li>
                     <li className='aboutus-team-item'>
-                        <Link to="/team/details" state={data[3]}
+                        <Link to={`/team/details/${data.items[3]._id}`}
                             onClick={() => {
                                 window.scrollTo(0, 0);
                             }}>
                             <div className="aboutus-item-bg"></div>
-                            <img src={data[3].img} className="aboutus-team-item-img" />
+                            <img src={`http://localhost:5000${data.items[3].img}`} className="aboutus-team-item-img" />
                         </Link>
                     </li>
                 </ul>

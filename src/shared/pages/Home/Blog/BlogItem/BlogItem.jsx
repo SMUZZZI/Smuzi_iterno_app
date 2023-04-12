@@ -7,15 +7,15 @@ function BlogItem({ blogCard }) {
     return (
         <li key={blogCard._id} className="blog-item">
             <div className="blog-img-block">
-                <img src={blogCard.img} className="blog-img" />
+                <img src={`http://localhost:5000${blogCard.img}`} className="blog-img" />
                 <div className="blog-img-tag">{blogCard.tag}</div>
             </div>
 
-            <h3 className="blog-item-title title-h3">{blogCard.title}</h3>
+            <h3 className="blog-item-title title-h3">{blogCard.title.slice(0, 20)}...</h3>
 
             <div className="blog-date-block">
                 <p className="blog-date">{blogCard.updatedAt.slice(0, 10)}</p>
-                <Link to={`/blog/id=/${blogCard._id}`} className="blog-btn"
+                <Link to={`/blog/${blogCard._id}`} className="blog-btn"
                     onClick={() => {
                         window.scrollTo(0, 0);
                     }}

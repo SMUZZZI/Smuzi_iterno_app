@@ -1,0 +1,76 @@
+.adminproject {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.adminproject-add {
+    width: 258px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.adminproject-add-btn svg{
+    top: 0;
+    margin-left: -8px;
+}
+.adminproject-add-btn:hover svg{
+    margin-left: -2px;
+}
+
+.adminproject-item {
+    display: inline-block;
+    width: 300px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+}
+.adminproject-item:nth-child(3n){
+    margin-right: 0;
+}
+
+.adminproject-img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.adminproject-title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.adminproject-link-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.adminproject-id {
+    font-size: 12px;
+}
+
+.adminproject-btn {
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.adminproject-btn circle {
+    color: #F4F0EC;
+    transition: color .1s ease-in-out;
+}
+
+.adminproject-btn:hover circle {
+    color: #CDA274;
+}
+
+.adminproject-btn path {
+    color: #292F36;
+    transition: color .1s ease-in-out;
+}
+
+.adminproject-btn:hover path {
+    color: #fff;
+}

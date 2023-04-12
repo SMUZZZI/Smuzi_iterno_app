@@ -7,7 +7,7 @@ function DesignSprints({Data}) {
     const data = Data;
     const items = data.list;
     const ulResult = [];
-
+    console.log(data);
     for (let i = 0; i < items.length; i++) {
         ulResult.push(
             <li key={i} className="designsprints-list-item">
@@ -20,14 +20,14 @@ function DesignSprints({Data}) {
   return (
     <section className='designsprints'>
         <h2 className='designsprints-title title-h2-small'>Design sprints are great</h2>
-        <p className='p-black-gray'>{data.maintext}</p>
+        <p className='p-black-gray designsprints-text'>{data.mainText}</p>
         <ul className='designsprints-list'>
             {ulResult}
         </ul>
         <div className='designsprints-img-block'>
-            <img src={data.img} className="designsprints-img"/>
+            <img src={`http://localhost:5000${data.img}`} className="designsprints-img"/>
         </div>
-        <p className='p-black-gray'>{data.secondtext}</p>
+        <p className='p-black-gray esignsprints-text'>{data.secondText}</p>
     </section>
   )
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 
 import "./aboutuspage.css";
 import Banner from '../subPages/Banner/Banner';
@@ -9,35 +9,45 @@ import Quotes from './Quotes/Quotes';
 import AboutUsTeam from '../subPages/AboutUsTeam/AboutUsTeam';
 import WhatWeDo from './WhatWeDo/WhatWeDo';
 
+import { fetchTeam } from '../../slices/team';
+import TeamPageListBlank from '../subPages/TeamPageListBlank/TeamPageListBlank';
+import Error from '../subPages/Error/Error';
+
 //banner background image
 import backgroundImg from "./img/aboutusP.jpg"
-import TeamPageListBlank from '../subPages/TeamPageListBlank/TeamPageListBlank';
-const background={
+const background = {
   name: "About Us",
   tag: "Home / About Us",
   img: backgroundImg,
 }
 
 function AboutUsPage() {
+  const dispath = useDispatch()
+  const aboutUsData = useSelector(state => state.team)
 
-  // const aboutUsData = useSelector(state => state.repos.items.team)
-  const aboutUsData = [1,2,3];
+  const isTeamLoading = aboutUsData.status === "loading";
+  const isTeamError = aboutUsData.status === "error";
 
-  const isTeamLoading = true
+  useEffect(() => {
+    dispath(fetchTeam())
+  }, []);
 
   return (
     <main className='about-usP'>
-        <Banner background={background}/>
-        <Quotes />
-        <WhatWeDo />
-        <AboutUsResult />
-        {
-          isTeamLoading ?
-          <TeamPageListBlank data={[1,2,3,4]} /> 
+      <Banner background={background} />
+      <Quotes />
+      <WhatWeDo />
+      <AboutUsResult />
+      {
+        isTeamError ?
+          <Error errorStatus={"500"} descr={"Не удалось загрузить team"} />
           :
-        <AboutUsTeam data={aboutUsData} title={"What the People Thinks About Us"}/>
-        }
-        <MailBox />
+          isTeamLoading ?
+            <TeamPageListBlank data={[1, 2, 3, 4]} />
+            :
+            <AboutUsTeam data={aboutUsData} title={"What the People Thinks About Us"} />
+      }
+      <MailBox />
     </main>
   )
 }

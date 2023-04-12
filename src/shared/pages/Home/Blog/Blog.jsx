@@ -5,7 +5,7 @@ import Heading from "./Heading/Heading";
 
 function Blog({ blogData }) {
     const data = blogData;
-
+ 
     return (
         <section className="blog">
             <Heading />

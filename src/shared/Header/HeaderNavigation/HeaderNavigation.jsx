@@ -34,7 +34,7 @@ function HeaderNavigation() {
                     <Link to="/services">Services</Link>
                 </li>
                 <li className="headerNavItem">
-                    <Link to="/project">Project</Link>
+                    <Link to="/project/bathroom">Project</Link>
                 </li>
                 <li className="headerNavItem">
                     <Link to="/blog">Blog</Link>

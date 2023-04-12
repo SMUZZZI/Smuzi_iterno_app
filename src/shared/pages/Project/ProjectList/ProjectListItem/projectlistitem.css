@@ -1,8 +1,12 @@
 .projectlist-item {
+    display: inline-block;
     margin-bottom: 35px;
-
+    margin-right: 30px;
     width: 585px;
-    
+}
+
+.projectlist-item:nth-child(2n) {
+    margin-right: 0;
 }
 
 .projectlist-item:last-child {
@@ -11,6 +15,7 @@
 
 .projectlist-item-img {
     margin-bottom: 24px;
+    height: 750px;
     width: 585px;
     min-height: 585px;
     max-height: 947px;

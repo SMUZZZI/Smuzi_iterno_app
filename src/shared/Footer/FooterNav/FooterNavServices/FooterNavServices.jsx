@@ -29,7 +29,7 @@ function FooterNavServices() {
                 }} className="footernavservices-item-p">Bedroom</Link>
             </li>
             <li className="footernavservices-item">
-                <Link to="/project/livingArea"onClick={() =>{
+                <Link to="/project/livingroom"onClick={() =>{
                     window.scrollTo(0, 0);
                 }} className="footernavservices-item-p">Living Area</Link>
             </li>

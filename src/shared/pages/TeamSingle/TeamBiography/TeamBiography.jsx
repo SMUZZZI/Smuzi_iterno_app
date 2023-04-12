@@ -3,7 +3,7 @@ import "./teambiography.css"
 
 
 function TeamBiography({ data }) {
-    const qnaItems = data.qnaData;
+    const qnaItems = data.data.qnaData;
     const qnaResult = [];
 
     const [currentItem, setCurrentItem] = useState(0);

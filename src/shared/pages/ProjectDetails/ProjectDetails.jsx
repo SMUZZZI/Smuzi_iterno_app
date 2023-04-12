@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useParams } from 'react-router-dom';
 import axios from "../../actions/axios";
 import { useEffect } from 'react';
-
+ 
 import "./projectdetails.css"
 import Banner from '../subPages/Banner/Banner'
 import ProjectDetailsTextBlock from './ProjectDetailsTextBlock/ProjectDetailsTextBlock';
@@ -28,7 +28,7 @@ function ProjectDetails() {
                 setData(res);
                 setIsLoading(false)
             })
-            .catch(err => {
+            .catch(err => { 
                 console.warn(err);
                 alert("Ошибка при получении проекта")
             })

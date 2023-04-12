@@ -1,16 +1,29 @@
 .admin-page {
     margin: 200px 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .adminaside{
-    
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adminaside-line{
+    margin: 0 auto;
+    margin-bottom: 80px;
+    width: 80%;
+    border: 1px solid #F4F0EC;
 }
 
 .adminaside-list{
+    width: 300px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .adminaside-item{

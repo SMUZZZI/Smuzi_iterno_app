@@ -41,7 +41,7 @@ function BlogSingleAside({ Tags }) {
                                             window.scrollTo(0, 0);
                                         }}
                                     >
-                                        <h3 className='blogsingleaside-news-item-p'>{item.title}</h3>
+                                        <h3 className='blogsingleaside-news-item-p'>{item.title.slice(0, 30)}...</h3>
                                         <p className='blogsingleaside-news-item-date'>{item.updatedAt.slice(0, 10)}</p>
                                     </Link>
                                 </li>

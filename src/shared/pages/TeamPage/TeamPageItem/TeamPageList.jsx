@@ -3,19 +3,21 @@ import { Link } from 'react-router-dom'
 import "./teampagelist.css"
 
 function TeamPageList({ data }) {
-  const team = data;
+  const team = data.items;
   const result = []
+
+  console.log(team);
 
   for (let i = 0; i < team.length; i++) {
     result.push(
       <li className='teampagelist-item'>
-        <Link to="/team/details" state={team[i]}
+        <Link to={`/team/details/${team[i]._id}`}
           onClick={() => {
             window.scrollTo(0, 0);
           }}>
           <div className='teampagelist-img-block'>
             <div className="teampagelist-item-bg"></div>
-            <img src={team[i].img} className="teampagelist-img" />
+            <img src={`http://localhost:5000${team[i].img}`} className="teampagelist-img" />
           </div>
         </Link>
 

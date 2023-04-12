@@ -4,6 +4,7 @@
 
 .blogsinglemain-title {
     margin-bottom: 21px;
+    word-wrap: break-word;
 }
 
 .blogsinglemain-img-block {
@@ -27,12 +28,13 @@
 
 .blogsinglemain-tags {
     margin-bottom: 48px;
-
+    word-wrap: break-word;
     display: flex;
     justify-content: space-between;
 }
 
 .blogsinglemain-tag-p {
+    word-wrap: break-word;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;

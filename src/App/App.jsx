@@ -22,6 +22,12 @@ const TeamSingle = React.lazy(() => import("../shared/pages/TeamSingle/TeamSingl
 const ContactUsPage = React.lazy(() => import("../shared/pages/ContactUsPage/ContactUsPage"))
 const AdminPage = React.lazy(() => import("../shared/adminPage/AdminPage"))
 const AdminLogin = React.lazy(() => import("../shared/adminPage/AdminLogin/AdminLogin"))
+const AdminProjectNew = React.lazy(() => import("../shared/adminPage/AdminProject/AdminProjectNew/AdminProjectNew"))
+const AdminProjectEdit = React.lazy(() => import("../shared/adminPage/AdminProject/AdminProjectEdit/AdminProjectEdit"))
+const AdminBlogNew = React.lazy(() => import("../shared/adminPage/AdminBlog/AdminBlogNew/AdminBlogNew"))
+const AdminBlogEdit = React.lazy(() => import("../shared/adminPage/AdminBlog/AdminBlogEdit/AdminBlogEdit"))
+const AdminTeamNew = React.lazy(() => import("../shared/adminPage/AdminTeam/AdminTeamNew/AdminTeamNew"))
+const AdminTeamEdit = React.lazy(() => import("../shared/adminPage/AdminTeam/AdminTeamEdit/AdminTeamEdit"))
 
 function App() {
 
@@ -48,15 +54,21 @@ function App() {
             <Route path="/aboutus" element={<AboutUsPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/single" element={<ServiceSingle />} />
-            <Route path="/project/*" element={<Project />} />
+            <Route path="/project/:id/*" element={<Project />} />
             <Route path="/project/id=/:id" element={<ProjectDetails />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:id" element={<BlogSingle />} />
             <Route path="/team" element={<TeamPage />} />
-            <Route path="/team/details" element={<TeamSingle />} />
+            <Route path="/team/details/:id" element={<TeamSingle />} />
             <Route path="/contactus" element={<ContactUsPage />} />
             <Route path="/admin/*" element={<AdminPage />} />
             <Route path="/login" element={<AdminLogin />} />
+            <Route path="/admin/project/new" element={<AdminProjectNew />} />
+            <Route path="/admin/project/:id/edit" element={<AdminProjectEdit />} />
+            <Route path="/admin/blog/new" element={<AdminBlogNew />} />
+            <Route path="/admin/blog/:id/edit" element={<AdminBlogEdit />} />
+            <Route path="/admin/team/new" element={<AdminTeamNew />} />
+            <Route path="/admin/team/:id/edit" element={<AdminTeamEdit />} />
           </Routes>
           <Footer />
         </Suspense>

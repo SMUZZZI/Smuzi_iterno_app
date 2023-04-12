@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBlog } from '../../slices/blog';
+import { fetchBlog, fetchBlogLimit } from '../../slices/blog';
 
 import "./blogpage.css"
 import Banner from '../subPages/Banner/Banner'
@@ -13,6 +13,8 @@ import backgroundImg from "./img/blogPageBanner.jpg"
 import BlogBlank from '../subPages/BlogBlank/BlogBlank';
 import LastPostBlank from './LastPost/LastPostBlank/LastPostBlank';
 import Error from '../subPages/Error/Error';
+import { useSearchParams } from 'react-router-dom';
+import { paginationSet } from '../../slices/pagination';
 
 const background = {
     name: "Articles & News",
@@ -23,30 +25,47 @@ const background = {
 
 function BlogPage() {
 
-    const dispath = useDispatch()
-    const blogData = useSelector(state => state.blog)
+    const dispatch = useDispatch()
+    const blogTotalPosts = useSelector(state => state.blog)
+
+    const blogData = useSelector(state => state.blogLimit)
+
     const isBlogLoading = blogData.status === "loading";
     const isBlogError = blogData.status === "error";
 
+    const num = useSelector(state => state.pagination)
+
+    const [searchParams, setSearchParams] = useSearchParams()
+    const pageQuery = searchParams.get("page") || "1"
+
+
+
+    //позиционирование экрана
     useEffect(() => {
-        dispath(fetchBlog())
+        window.scrollTo(0, 300);
+    }, [isBlogLoading]);
+
+    //переключение страниц
+    useEffect(() => {
+        //задаем параметры через пагинацию
+        setSearchParams({ page: num })
+
+        //фетчим проекты по пагинации
+        dispatch(fetchBlogLimit({ limit: 6, page: num }))
+    }, [num]);
+    useEffect(() => {
+        setSearchParams({ page: pageQuery || num })
+        dispatch(fetchBlogLimit({ limit: 6, page: pageQuery || num }))
+        dispatch(fetchBlog())
+        dispatch(paginationSet(pageQuery || 1))
     }, []);
-
-    const [posts, setPosts] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [postPerPage] = useState(6);
-
-    const paginate = (pageNum) => {
-        setCurrentPage(pageNum);
-        window.scrollTo(0, 650);
-    }
 
     return (
         <main className='blogpage'>
             <Banner background={background} />
             {
                 isBlogError ?
-                <Error errorStatus={"500"} descr={"Не удалось загрузить посты"}/>
+                    <Error errorStatus={"500"} descr={"Не удалось загрузить посты"} />
                     :
                     isBlogLoading ?
                         <div className='main-blank'>
@@ -56,18 +75,11 @@ function BlogPage() {
                         :
                         <>
                             <LastPost data={blogData.items[blogData.items.length - 1]} />
-                            <AllPosts
-                                data={blogData.items}
-                                postsData={{
-                                    posts,
-                                    currentPage,
-                                    postPerPage,
-                                    setPosts
-                                }} />
+                            <AllPosts currentPosts={blogData.items} />
                             <Pagination
-                                postPerPage={postPerPage}
-                                totalPosts={blogData.items.length}
-                                paginate={paginate}
+                                totalPosts={blogTotalPosts.items.length}
+                                currentNum={num}
+                                perPage={6}
                             />
                         </>
             }

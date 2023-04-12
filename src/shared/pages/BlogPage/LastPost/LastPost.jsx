@@ -11,11 +11,11 @@ function LastPost({ data }) {
             <h2 className='lastpost-title-main title-h2-small'>Latest Post</h2>
             <article className='lastpost-container'>
                 <div className="lastpost-img-container">
-                    <img src={data.img} className="lastpost-img" />
+                    <img src={`http://localhost:5000${data.img}`} className="lastpost-img" />
                 </div>
                 <div className="lastpost-text-block">
-                    <h3 className='lastpost-title-post title-h3'>{data.title}</h3>
-                    <p className='lastpost-text-post p-black-gray'>{data.text}</p>
+                    <h3 className='lastpost-title-post title-h3'>{data.title.slice(0, 30)}...</h3>
+                    <p className='lastpost-text-post p-black-gray'>{data.text.slice(0, 30)}...</p>
                     <div className="lastpost-tag-btn-block">
                         <p className='lastpost-date'>{date}</p>
                         <Link to={`/blog/${data._id}`} state={data._id} className="lastpost-blog-btn"

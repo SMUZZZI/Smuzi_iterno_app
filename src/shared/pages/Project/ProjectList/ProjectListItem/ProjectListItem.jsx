@@ -2,15 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import "./projectlistitem.css"
 
-function ProjectListItem(data) {
-    const items = data.data;
+function ProjectListItem({data}) { 
+    const items = data;
 
     return (
         <ul className='projectlist-list'>
             {
                 items.map(item => (
                     <li key={item._id} className='projectlist-item'>
-                        <img src={item.img} className="projectlist-item-img" />
+                        <img src={`http://localhost:5000${item.img}`} className="projectlist-item-img" />
                         <div className='projectlist-item-content'>
                             <div className='projectlist-item-text-content'>
                                 <h3 className='projectlist-item-title title-h3'>{item.title}</h3>

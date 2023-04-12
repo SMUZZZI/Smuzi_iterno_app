@@ -1,22 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 import "./allposts.css"
 
 
-function AllPosts({ data, postsData }) {
-
-
-    const posts = postsData.posts;
-    const currentPage = postsData.currentPage;
-    const postPerPage = postsData.postPerPage;
-
-    const setPosts = postsData.setPosts;
-    useEffect(() => {
-        setPosts(data);
-    })
-    const indexOfLastPost = currentPage * postPerPage;
-    const indexOfFirstPost = indexOfLastPost - postPerPage;
-    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+function AllPosts({ currentPosts }) {
 
     return (
         <section className='allposts'>
@@ -26,11 +14,11 @@ function AllPosts({ data, postsData }) {
                     currentPosts.map(i => (
                         <li key={i._id} className="allposts-blog-item">
                             <div className="allposts-blog-img-block">
-                                <img src={i.img} className="allposts-blog-img" />
+                                <img src={`http://localhost:5000${i.img}`} className="allposts-blog-img" />
                                 <div className="allposts-blog-img-tag">{i.tag}</div>
                             </div>
 
-                            <h3 className="allposts-blog-item-title title-h3">{i.title}</h3>
+                            <h3 className="allposts-blog-item-title title-h3">{i.title.slice(0, 20)}...</h3>
 
                             <div className="allposts-blog-date-block">
                                 <p className="allposts-blog-date">{i.updatedAt.slice(0, 10)}</p>
