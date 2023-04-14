@@ -1,26 +1,28 @@
-.whatwedo{
+.whatwedo {
     margin-bottom: 200px;
 
     display: flex;
     justify-content: space-between;
 }
 
-.whatwedo-item{
+.whatwedo-item {
     width: 450px;
 }
-.whatwedo-title{
+
+.whatwedo-title {
     margin-bottom: 23px;
 }
-.whatwedo-p{
+
+.whatwedo-p {
     margin-bottom: 61px;
 }
 
-.whatwedo-btn{
+.whatwedo-btn {
     padding: 26px 41px;
     box-shadow: 0px 10px 20px rgba(192, 192, 192, 0.35);
 }
 
-.whatwedo-item:last-child{
+.whatwedo-item:last-child {
     width: 659px;
     height: 377px;
 
@@ -28,4 +30,41 @@
     background-position: center center;
     background-size: cover;
     border-radius: 70px;
+}
+
+@media screen and (max-width: 1250px) {
+    .whatwedo {
+        margin: 0 30px;
+        margin-bottom: 100px;
+    }
+    .whatwedo-item {
+        width: 350px;
+    }
+    .whatwedo-item:last-child {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .whatwedo {
+        margin: 0 30px;
+        margin-bottom: 70px;
+        flex-direction: column-reverse;
+    }
+    .whatwedo-item {
+        width: 100%;
+    }
+    .whatwedo-title {
+        margin-bottom: 10px;
+    }
+    .whatwedo-p {
+        margin-bottom: 40px;
+    }
+    .whatwedo-item:last-child {
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+    }
 }

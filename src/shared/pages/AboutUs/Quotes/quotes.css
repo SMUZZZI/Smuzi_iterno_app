@@ -1,4 +1,4 @@
-.quotes{
+.quotes {
     margin: 0 auto;
     margin-bottom: 200px;
 
@@ -16,12 +16,12 @@
     background-size: contain;
 }
 
-.quotes-conctent{
+.quotes-conctent {
     padding: 80px 100px;
     width: 751px;
 }
 
-.quotes-decor{
+.quotes-decor {
     font-style: italic;
     font-weight: 400;
     font-size: 85px;
@@ -30,7 +30,7 @@
     text-align: center;
 }
 
-.quotes-title{
+.quotes-title {
     margin-bottom: 34px;
 
     font-style: italic;
@@ -40,11 +40,76 @@
 
     text-align: center;
 }
-.quotes-p{
+
+.quotes-p {
     text-align: center;
     font-weight: 400;
     font-size: 25px;
     line-height: 150%;
 
     color: #4D5053;
+}
+
+@media screen and (max-width: 1250px) {
+    .quotes {
+        margin-bottom: 100px;
+        width: 600px;
+    }
+    .quotes-conctent {
+        padding: 60px 800px;
+        width: 500px;
+    }
+    .quotes-decor {
+        font-size: 60px;
+    }
+    .quotes-title {
+        margin-bottom: 34px;
+        font-size: 25px;
+    }
+    
+    .quotes-p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .quotes {
+        margin-bottom: 50px;
+        width: 400px;
+        height: fit-content;
+    }
+    .quotes-conctent {
+        padding: 20px 200px;
+        width: 300px;
+    }
+    .quotes-decor {
+        font-size: 40px;
+    }
+    .quotes-title {
+        margin-bottom: 80px;
+        font-size: 15px;
+    }
+    
+    .quotes-p {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .quotes {
+        width: 250px;
+    }
+    .quotes-conctent {
+        width: 200px;
+    }
+    .quotes-decor {
+        font-size: 35px;
+    }
+    .quotes-title {
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+    
+    .quotes-p {
+        font-size: 12px;
+    }
 }

@@ -1,6 +1,6 @@
-.counter{
+.counter {
     margin-bottom: 200px;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,51 +10,74 @@
 
     background-color: #F4F0EC;
 }
-.counter-bg{
+
+.counter-bg {
     position: absolute;
-    left: -360px;
-    
-    width: 1911px;
+    width: 100vw;
+    max-width: 100vw;
+    left: calc(-50vw + 50% - 9px);
     height: 457px;
-    
     background-color: #F4F0EC;
     z-index: -1;
 }
-.counter-block{
+
+.counter-block {
     display: flex;
-    justify-content: space-between;
-    width: 1082px;
+    justify-content: space-around;
+    width: 80%;
 }
 
-.counter-item{
+.counter-item {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     position: relative;
-    padding-right: 100px;
 }
-.counter-item:last-child{
+
+.counter-item:last-child {
     padding: 0;
 }
 
-.counter-item::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 1px;
-    background-color: #CDA274;
-}
-.counter-item:last-child::after{
-    background-color: transparent;
-}
-
-.counter-numbers{
+.counter-numbers {
     font-weight: 400;
     font-size: 85px;
     line-height: 125%;
 
     color: #CDA274;
+}
+
+@media screen and (max-width: 1250px) {
+    .counter {
+        margin-bottom: 100px;
+    }
+
+}
+@media screen and (max-width: 1024px) {
+    .counter {
+        height: 300px;
+    }
+
+    .counter-numbers {
+        font-size: 50px;
+    }
+    .counter-bg {
+        height: 300px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .counter {
+        margin-bottom: 50px;
+        height: 200px;
+    }
+    .counter-numbers {
+        font-size: 40px;
+    }
+    .counter-bg {
+        display: none;
+    }
+    .counter-p{
+        font-size: 8px;
+    }
+
 }

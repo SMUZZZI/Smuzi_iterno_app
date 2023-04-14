@@ -1,4 +1,4 @@
-.testimonial-Item{
+.testimonial-Item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,30 +8,108 @@
     border-radius: 25px;
     margin-right: 16px;
 }
-.testimonial-Item:last-child{
+
+.testimonial-Item:last-child {
     margin: 0;
 }
 
-.testimonial-Item-content{
+.testimonial-Item-content {
     margin-top: 53px;
     width: 296px;
 }
 
-.person{
+.person {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
 }
-.person-photo{
+
+.person-photo {
     margin-right: 23px;
     width: 77px;
     height: 77px;
     object-fit: cover;
     border-radius: 50%;
 }
-.person-location{
+
+.person-location {
     font-weight: 400;
     font-size: 22px;
     line-height: 150%;
     color: #4D5053;
+}
+
+@media screen and (max-width: 1250px) {
+    .testimonial-Item {
+        width: 270px;
+        height: 250px;
+        margin-right: 16px;
+    }
+
+    .testimonial-Item-content {
+        margin-top: 10px;
+        max-width: 270px;
+    }
+
+    .person {
+        margin-bottom: 20px;
+    }
+
+    .person-photo {
+        margin-right: 23px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial-Item-p {
+        margin: 0 auto;
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .testimonial-Item {
+        width: 90vw;
+        height: fit-content;
+        padding-bottom: 15px;
+        margin-right: 0;
+        margin-bottom: 10px;
+        border-radius: 15px;
+    }
+
+    .testimonial-Item:last-child {
+        margin-bottom: 0;
+    }
+
+    .testimonial-Item-content {
+        margin-top: 10px;
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .person {
+        justify-content: left;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-Item-person-title {
+        font-size: 15px;
+    }
+
+    .person-photo {
+        margin-right: 5px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .person-location {
+        font-size: 12px;
+    }
+
+    .testimonial-Item-p {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
 }

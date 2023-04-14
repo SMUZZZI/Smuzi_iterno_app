@@ -9,7 +9,7 @@ function HeaderPages() {
         <Link to="/aboutus">About Us</Link>
         </li>
         <li className='headerpages-item'>
-        <Link to="/project">Our Projects</Link>
+        <Link to="/project/bathroom/1">Our Projects</Link>
         </li>
         <li className='headerpages-item'>
         <Link to="/team">Our Team</Link>

@@ -9,7 +9,7 @@ function ToPortfolio() {
             <div className="toportfolio-content">
                 <h2 className='title-h2-small toportfolio-title'>We love design.That's how we got here.</h2>
                 <p className='p-black-gray toportfolio-p'>It is a long established fact that a reader will be distracted by the of readable content .</p>
-                <Link to="/project" className='toportfolio-link btn'
+                <Link to="/project/bathroom/1" className='toportfolio-link btn'
                     onClick={()=>{
                         window.scrollTo(0, 0);
                     }}

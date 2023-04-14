@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@300;400;600;700&family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500&family=Roboto:wght@300;400;500;700;900&display=swap');
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -22,6 +25,7 @@
   animation: mulShdSpin 1.3s infinite linear;
   transform: translateZ(0);
 }
+
 .loader-container-project {
   position: relative;
   left: 50%;
@@ -86,6 +90,30 @@
 
 
 /* btn and links */
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Serif Display', serif;
+}
+
+p, button, a {
+  font-family: 'Jost', serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
 
 .btn {
   position: relative;
@@ -190,7 +218,8 @@
 
   transition: color .1s ease-in-out;
 }
-.circle-btn path{
+
+.circle-btn path {
   color: #292F36;
   transition: color .1s ease-in-out;
 }
@@ -198,6 +227,7 @@
 .circle-btn:hover {
   color: #CDA274;
 }
+
 .circle-btn:hover path {
   color: #fff;
 }
@@ -248,4 +278,193 @@
   font-size: 22px;
   line-height: 150%;
   color: #4D5053;
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    max-width: 1024px;
+  }
+
+  .title-h3 {
+    font-size: 22px;
+    line-height: 150%;
+  }
+  .title-h3-small {
+    font-size: 20px;
+    line-height: 130%;
+  }
+  .p-black {
+    font-size: 18px;
+    line-height: 130%;
+  }
+  
+  .p-black-gray {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .title-h2 {
+    font-size: 50px;
+  }
+  
+  .title-h2-small {
+    font-size: 35px;
+  }
+
+  .link-black-gray {
+    font-size: 15px;
+  }
+
+  .btn {
+    font-size: 15px;
+  }
+  .btn-short {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title-h3 {
+    font-size: 20px;
+    line-height: 150%;
+  }
+  .title-h3-small {
+    font-size: 18px;
+    line-height: 130%;
+  }
+  .p-black {
+    font-size: 15px;
+    line-height: 130%;
+  }
+  
+  .p-black-gray {
+    font-size: 15px;
+    line-height: 130%;
+  }
+
+  .title-h2 {
+    font-size: 40px;
+  }
+  
+  .title-h2-small {
+    font-size: 30px;
+  }
+
+  .link-black-gray {
+    font-size: 15px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 20px 48px;
+    padding-right: 55px;
+  }
+  .btn svg {
+    top: 21px;
+    margin-left: 10px;
+  }
+  .btn:hover svg {
+    margin-left: 15px;
+  }
+
+  .btn-short {
+    font-size: 12px;
+    padding: 20px 31px;
+    padding-right: 50px;
+  }
+  .btn-short svg {
+    top: 21px;
+    margin-left: 10px;
+  }
+  .btn-short:hover svg {
+    margin-left: 15px;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .title-h3 {
+    font-size: 18px;
+    line-height: 150%;
+  }
+  .title-h3-small {
+    font-size: 15px;
+    line-height: 130%;
+  }
+  .p-black {
+    font-size: 12px;
+    line-height: 130%;
+  }
+  
+  .p-black-gray {
+    font-size: 12px;
+    line-height: 130%;
+  }
+
+  .title-h2 {
+    font-size: 30px;
+  }
+  
+  .title-h2-small {
+    font-size: 25px;
+  }
+
+  .link-black-gray {
+    position: relative;
+    font-size: 12px;
+  }
+  .link-black-gray::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -6px;
+    right: -27px;
+    border-bottom: 2px solid #F4F0EC;
+    transition: border-color .1s ease-in-out;
+  }
+  .link-black-gray:hover:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -6px;
+    right: -27px;
+    border-bottom: 2px solid #CDA274;
+  }
+  .link-black-gray svg {
+    top: 1px;
+    margin-left: 8px;
+  }
+  
+  .link-black-gray:hover svg {
+    margin-left: 12px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 20px 48px;
+    padding-right: 55px;
+  }
+  .btn svg {
+    top: 21px;
+    margin-left: 10px;
+  }
+  .btn:hover svg {
+    margin-left: 15px;
+  }
+
+  .btn-short {
+    font-size: 12px;
+    padding: 20px 31px;
+    padding-right: 50px;
+  }
+  .btn-short svg {
+    top: 21px;
+    margin-left: 10px;
+  }
+  .btn-short:hover svg {
+    margin-left: 15px;
+  }
+  
 }

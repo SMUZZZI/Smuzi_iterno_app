@@ -1,6 +1,7 @@
 import { number } from 'prop-types';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { paginationDec, paginationInc, paginationSet } from '../../../slices/pagination';
 
 import "./pagination.css"
@@ -22,6 +23,7 @@ function Pagination({ totalPosts, currentNum, perPage }) {
     
     (currentNum >= pageNum.length - 2) ? currentNums = pageNum.slice(pageNum.length - 3) : currentNums = pageNum.slice(indexOfFirstNum, indexOfLastNum);
 
+    console.log(Link);
 
     return (
         <nav className='pagination-block'>

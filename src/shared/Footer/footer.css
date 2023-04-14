@@ -1,5 +1,4 @@
-
-.footer-main{
+.footer-main {
     margin-bottom: 134px;
     width: 100%;
 
@@ -7,7 +6,7 @@
     justify-content: space-between;
 }
 
-.footer-copyright{
+.footer-copyright {
     margin-bottom: 46px;
 
     text-align: center;
@@ -17,4 +16,28 @@
     line-height: 150%;
 
     color: #4D5053;
+}
+
+@media screen and (max-width: 1250px) {
+    .footer-main {
+        margin: 0 30px;
+        margin-bottom: 80px;
+    }
+
+    .footer-copyright {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-main {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-copyright {
+        margin: 0 15px;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
 }

@@ -1,10 +1,7 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense } from "react";
 import { Routes, Route } from 'react-router-dom';
-import { useDispatch, useSelector } from "react-redux";
-import { fetchAuthAdmin, selectIsAuth } from "../shared/slices/auth";
 
 import './App.css';
-import "../shared/pages/Home/main.css";
 
 import Header from '../shared/Header/Header';
 import Footer from "../shared/Footer/Footer";
@@ -31,15 +28,6 @@ const AdminTeamEdit = React.lazy(() => import("../shared/adminPage/AdminTeam/Adm
 
 function App() {
 
-  const dispatch = useDispatch()
-
-  const Auth = useSelector(selectIsAuth)
-  const isAuth = Auth.status === true;
-
-  useEffect(() => {
-    dispatch(fetchAuthAdmin())
-  }, []);
-
   return (
     <div className='container'>
       {
@@ -54,9 +42,9 @@ function App() {
             <Route path="/aboutus" element={<AboutUsPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/single" element={<ServiceSingle />} />
-            <Route path="/project/:id/*" element={<Project />} />
+            <Route path="/project/:id/:page/*" element={<Project />} />
             <Route path="/project/id=/:id" element={<ProjectDetails />} />
-            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:page" element={<BlogPage />} />
             <Route path="/blog/:id" element={<BlogSingle />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/team/details/:id" element={<TeamSingle />} />

@@ -12,3 +12,9 @@
 
     color: #4D5053;
 }
+
+@media screen and (max-width: 1250px) {
+    .footerlink {
+        display: none;
+    }
+}

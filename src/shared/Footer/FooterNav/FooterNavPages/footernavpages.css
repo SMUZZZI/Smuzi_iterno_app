@@ -1,17 +1,42 @@
-.footernavpages-item-title{
+.footernavpages-item-title {
     margin-bottom: 26px;
 
     font-weight: 400;
     font-size: 25px;
     line-height: 125%;
 }
-.footernavpages-item-p{
+
+.footernavpages-item-p {
     font-weight: 400;
     font-size: 22px;
     line-height: 300%;
 
     color: #4D5053;
 }
-.footernavpages-item-p:hover{
+
+.footernavpages-item-p:hover {
     color: #CDA274;
+}
+
+@media screen and (max-width: 1250px) {
+    .footernavpages-item-title {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .footernavpages-item-p {
+        font-size: 20px;
+        line-height: 200%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .footernavpages-item-title {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .footernavpages-item-p {
+        font-size: 15px;
+        line-height: 200%;
+    }
 }

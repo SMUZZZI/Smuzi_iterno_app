@@ -1,5 +1,4 @@
-
-.heading{
+.heading {
     margin-bottom: 52px;
 
     display: flex;
@@ -9,12 +8,31 @@
     width: 811px;
 }
 
-.heading-title{
+.heading-title {
     margin-bottom: 12px;
 }
 
-.heading-p{
+.heading-p {
     text-align: center;
 }
 
+@media screen and (max-width: 1024px) {
+    .heading {
+        margin-bottom: 30px;
+    }
 
+    .heading-p {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .heading {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .heading-p {
+        padding: 0 15px;
+        width: 100%;
+    }
+}

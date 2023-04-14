@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Routes, Route, Link, useParams, useSearchParams } from 'react-router-dom';
+import { Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProjectLimit, fetchProjectParam } from '../../slices/project';
 import "./project.css"
@@ -23,48 +23,45 @@ const background = {
 function Project() {
     const dispatch = useDispatch()
 
+    const navigate = useNavigate();
+
     const projectData = useSelector(state => state.projectLimit)
     const isProjectLoading = projectData.status === "loading";
     const isProjectError = projectData.status === "error";
 
     const num = useSelector(state => state.pagination)
     const totalPosts = useSelector(state => state.project.items)
-    const { id } = useParams()
-    
-    const [searchParams, setSearchParams] = useSearchParams()
-    const pageQuery = searchParams.get("page") || "1"
-   
+    const { id, page } = useParams()
+
     const [currentPageBTN, setCurrentPageBTN] = useState(1);
 
-   //позиционирование экрана
+    useEffect(() => {
+        navigate(`/project/${id}/${num}`)
+    }, [num]);
+
+    //позиционирование экрана
     useEffect(() => {
         window.scrollTo(0, 300);
     }, [isProjectLoading]);
 
-    //переключение страниц
-    useEffect(() => {
-        //задаем параметры через пагинацию
-        setSearchParams({ page: num })
-        
-        //фетчим проекты по пагинации
-        dispatch(fetchProjectLimit({ id, page: num }))
-    }, [num]);
-
     //стартовые параметры
     const btnParams = (id, btn) => {
-        //добавляем параметры в строку
-        setSearchParams({ page: pageQuery || num })
-
         //фетчим проекты по id для пагинации
         dispatch(fetchProjectParam(id))
 
         //фетчим проекты по id и странице
-        dispatch(fetchProjectLimit({ id, page: pageQuery || num }))
+        dispatch(fetchProjectLimit({ id, page }))
 
         //переключение кнопок и изменение пагинации
         setCurrentPageBTN(btn)
-        dispatch(paginationSet( pageQuery || 1))
+        dispatch(paginationSet(page || 1))
     }
+
+    //переключение страниц
+    useEffect(() => {
+        //фетчим проекты по пагинации
+        dispatch(fetchProjectLimit({ id, page: num }))
+    }, [num]);
 
 
     useEffect(() => {
@@ -86,24 +83,22 @@ function Project() {
         }
     }, [id])
 
-
-
     return (
         <main className='projectpage'>
             <Banner background={background} />
             <section className='projecttabs'>
                 <ul className='projecttabs-list'>
                     <li>
-                        <Link to="/project/bathroom" className={`projecttabs-btn ${currentPageBTN === 1 && "projecttabs-btn-active"}`}>Bathroom</Link>
+                        <Link to="/project/bathroom/1" className={`projecttabs-btn ${currentPageBTN === 1 && "projecttabs-btn-active"}`}>Bathroom</Link>
                     </li>
                     <li>
-                        <Link to="/project/bedroom" className={`projecttabs-btn ${currentPageBTN === 2 && "projecttabs-btn-active"}`}>Bed Room</Link>
+                        <Link to="/project/bedroom/1" className={`projecttabs-btn ${currentPageBTN === 2 && "projecttabs-btn-active"}`}>Bed Room</Link>
                     </li>
                     <li>
-                        <Link to="/project/kitchan" className={`projecttabs-btn ${currentPageBTN === 3 && "projecttabs-btn-active"}`}>Kitchen</Link>
+                        <Link to="/project/kitchan/1" className={`projecttabs-btn ${currentPageBTN === 3 && "projecttabs-btn-active"}`}>Kitchen</Link>
                     </li>
                     <li>
-                        <Link to="/project/livingroom" className={`projecttabs-btn ${currentPageBTN === 4 && "projecttabs-btn-active"}`}>Living Area</Link>
+                        <Link to="/project/livingroom/1" className={`projecttabs-btn ${currentPageBTN === 4 && "projecttabs-btn-active"}`}>Living Area</Link>
                     </li>
                 </ul>
             </section>

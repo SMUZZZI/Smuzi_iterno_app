@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import Search from "../Search/Search";
 import "./headernavigation.css";
 
 import { useState } from 'react'
@@ -34,15 +33,14 @@ function HeaderNavigation() {
                     <Link to="/services">Services</Link>
                 </li>
                 <li className="headerNavItem">
-                    <Link to="/project/bathroom">Project</Link>
+                    <Link to="/project/bathroom/1">Project</Link>
                 </li>
                 <li className="headerNavItem">
-                    <Link to="/blog">Blog</Link>
+                    <Link to="/blog/1">Blog</Link>
                 </li>
                 <li className="headerNavItem">
                     <Link to="/contactus">Contact</Link>
                 </li>
-                <Search />
             </ul>
         </nav>
     );

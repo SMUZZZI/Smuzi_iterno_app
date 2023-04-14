@@ -15,3 +15,20 @@
 .footernavservices-item-p:hover{
     color: #CDA274;
 }
+
+@media screen and (max-width: 1250px) {
+    .footernavservices-item-title {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .footernavservices-item-p {
+        font-size: 20px;
+        line-height: 200%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .footernavservices {
+        display: none;
+    }
+}

@@ -11,3 +11,10 @@
     font-size: 25px;
     line-height: 125%;
 }
+
+@media screen and (max-width: 768px) {
+    .footernav{
+        margin: 0 auto;
+        width: 80%;
+    }
+}

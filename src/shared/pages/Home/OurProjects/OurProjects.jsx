@@ -2,7 +2,7 @@ import React from "react";
 import OurProjectItem from "./OurProjectItem/OurProjectItem";
 import "./ourprojects.css";
 
-
+ 
 function OurProjects(ourProjects){
     const data = ourProjects.ourProjects;
     return(

@@ -6,7 +6,7 @@ function OurProjectItem({ data }) {
     const details = data
     return (
         <li key={data._id} className="ourproject-item">
-            <img src={`http://localhost:5000${data.img}`} className="ourproject-item-img" />
+            <img src={`http://45.146.166.237:5000${data.img}`} className="ourproject-item-img" />
             <div className="ourproject-item-info-block">
                 <div className="ourproject-item-title-block">
                     <h3 className="ourproject-item-title title-h3">{data.title}</h3>

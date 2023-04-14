@@ -18,6 +18,7 @@ import ProjectBlank from '../subPages/ProjectBlank/ProjectBlank';
 import BlogBlank from '../subPages/BlogBlank/BlogBlank';
 import Error from '../subPages/Error/Error';
 
+import "./main.css";
 
 function Main() {
 

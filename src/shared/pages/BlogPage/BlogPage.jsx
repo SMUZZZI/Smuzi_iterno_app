@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBlog, fetchBlogLimit } from '../../slices/blog';
 
@@ -13,8 +13,8 @@ import backgroundImg from "./img/blogPageBanner.jpg"
 import BlogBlank from '../subPages/BlogBlank/BlogBlank';
 import LastPostBlank from './LastPost/LastPostBlank/LastPostBlank';
 import Error from '../subPages/Error/Error';
-import { useSearchParams } from 'react-router-dom';
 import { paginationSet } from '../../slices/pagination';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const background = {
     name: "Articles & News",
@@ -26,6 +26,9 @@ const background = {
 function BlogPage() {
 
     const dispatch = useDispatch()
+
+    const navigate = useNavigate();
+
     const blogTotalPosts = useSelector(state => state.blog)
 
     const blogData = useSelector(state => state.blogLimit)
@@ -35,10 +38,11 @@ function BlogPage() {
 
     const num = useSelector(state => state.pagination)
 
-    const [searchParams, setSearchParams] = useSearchParams()
-    const pageQuery = searchParams.get("page") || "1"
+    const { page } = useParams()
 
-
+    useEffect(() => {
+        navigate(`/blog/${num}`)
+    }, [num]);
 
     //позиционирование экрана
     useEffect(() => {
@@ -47,17 +51,14 @@ function BlogPage() {
 
     //переключение страниц
     useEffect(() => {
-        //задаем параметры через пагинацию
-        setSearchParams({ page: num })
-
         //фетчим проекты по пагинации
         dispatch(fetchBlogLimit({ limit: 6, page: num }))
     }, [num]);
+
     useEffect(() => {
-        setSearchParams({ page: pageQuery || num })
-        dispatch(fetchBlogLimit({ limit: 6, page: pageQuery || num }))
+        dispatch(fetchBlogLimit({ limit: 6, page: page || num }))
         dispatch(fetchBlog())
-        dispatch(paginationSet(pageQuery || 1))
+        dispatch(paginationSet(page || 1))
     }, []);
 
     return (

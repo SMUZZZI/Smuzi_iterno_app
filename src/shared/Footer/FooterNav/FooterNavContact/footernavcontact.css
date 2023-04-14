@@ -19,3 +19,28 @@
 .footernavcontact-item:nth-child(2n) .footernavcontact-item-p{
     line-height: 150%;
 }
+
+@media screen and (max-width: 1250px) {
+    .footernavcontact-item-title {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .footernavcontact-item-p {
+        font-size: 20px;
+        line-height: 200%;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .footernavcontact-item-title {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .footernavcontact-item-p {
+        font-size: 15px;
+        line-height: 200%;
+        max-width: 150px;
+    }
+}

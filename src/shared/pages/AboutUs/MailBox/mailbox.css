@@ -1,8 +1,8 @@
-.mailbox{
+.mailbox {
     margin-bottom: 200px;
 }
 
-.mailbox-container{
+.mailbox-container {
     margin: 0 auto;
     width: 796px;
     display: flex;
@@ -10,18 +10,19 @@
     align-items: center;
 }
 
-.mailbox-title{
+.mailbox-title {
     margin-bottom: 77px;
     text-align: center;
 }
 
-.mailbox-form{
+.mailbox-form {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.mailbox-form input{
+
+.mailbox-form input {
     font-weight: 400;
     font-size: 22px;
     line-height: 150%;
@@ -29,7 +30,8 @@
     border: none;
     border-bottom: 1px solid #000;
 }
-.mailbox-form input::placeholder{
+
+.mailbox-form input::placeholder {
     font-weight: 400;
     font-size: 22px;
     line-height: 150%;
@@ -37,23 +39,24 @@
     color: #4D5053;
 }
 
-.mailbox-form-block-one{
+.mailbox-form-block-one {
     margin-bottom: 57px;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.mailbox-form-name{
-    width: 378px;
-    height: 45px;
-}
-.mailbox-form-mail{
+.mailbox-form-name {
     width: 378px;
     height: 45px;
 }
 
-.mailbox-form-comment{
+.mailbox-form-mail {
+    width: 378px;
+    height: 45px;
+}
+
+.mailbox-form-comment {
     margin-bottom: 77px;
     width: 796px;
     height: 238px;
@@ -63,16 +66,89 @@
 
     resize: none;
 }
-.mailbox-form-comment::placeholder{
+
+.mailbox-form-comment::placeholder {
     font-weight: 400;
     font-size: 22px;
     line-height: 150%;
 
     color: #4D5053;
 }
-.mailbox-form-btn{
+
+.mailbox-form-btn {
     box-shadow: 0px 10px 20px rgba(192, 192, 192, 0.35);
 }
-.mailbox-form-btn svg{
+
+.mailbox-form-btn svg {
     top: 29px;
+}
+
+@media screen and (max-width: 1250px) {
+    .mailbox {
+        margin-bottom: 100px;
+    }
+    .mailbox-container {
+        width: 600px;
+    }
+    .mailbox-form-name {
+        width: 250px;
+    }
+    
+    .mailbox-form-mail {
+        width: 250px;
+    }
+    .mailbox-form-comment {
+        margin-bottom: 60px;
+        width: 600px;
+        height: 150px;
+    }
+    .mailbox-form-btn svg {
+        top: 19px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .mailbox-title {
+        margin-bottom: 50px;
+    }
+    .mailbox-container {
+        width: 400px;
+    }
+    .mailbox-form-name {
+        width: 180px;
+    }
+    
+    .mailbox-form-mail {
+        width: 180px;
+    }
+    .mailbox-form-comment {
+        margin-bottom: 20px;
+        width: 400px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mailbox {
+        margin-bottom: 50px;
+    }
+    .mailbox-title {
+        margin-bottom: 30px;
+    }
+    .mailbox-container {
+        width: 300px;
+    }
+    .mailbox-form-name {
+        width: 120px;
+        height: 30px;
+    }
+    
+    .mailbox-form-mail {
+        width: 120px;
+        height: 30px;
+    }
+    .mailbox-form-comment {
+        width: 300px;
+        height: 120px;
+    }
 }

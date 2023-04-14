@@ -10,7 +10,7 @@ function WhatWeDo() {
                 <p className='whatwedo-p p-black-gray '>It is a long established fact that a reader will be distracted by the of readable content of a page
                     when lookings at its layouts the points of using
                     that it has a more-or-less normal.</p>
-                <Link to="/blog" className='btn'>Our Concept
+                <Link to="/blog/1" className='btn'>Our Concept
                     <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 8.93542L15.7232 8.79857M10.6182 2.41138L17.1412 8.93436L10.4868 15.5887" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
                     </svg>

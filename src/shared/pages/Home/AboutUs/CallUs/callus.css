@@ -26,3 +26,24 @@
     line-height: 150%;
     color: #4D5053;
 }
+
+@media screen and (max-width: 1250px) {
+    .callus-list-number{
+        font-size: 20px;
+    }
+    .call-anytime{
+        font-size: 20px;
+    }
+
+    .callus-list-item svg {
+        max-width: 70px;
+        max-height: 70px;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .callus{
+        display: none;
+    }
+
+}
