@@ -36,13 +36,14 @@
 
     transition: color .1s ease-in-out, background-color .1s ease-in-out;
 }
-.projectdetailsphotoblock-photo-block-svg svg{
+
+.projectdetailsphotoblock-photo-block-svg svg {
     position: absolute;
     top: 35%;
     left: 37%;
 }
 
-.projectdetailsphotoblock-photo-block-svg:hover{
+.projectdetailsphotoblock-photo-block-svg:hover {
     color: #4D5053;
     background-color: #f3f3f3;
 }
@@ -77,4 +78,69 @@
 
 .projectdetailsphotoblock-photo-fullscreen-modal-active {
     display: block;
+}
+
+@media screen and (max-width: 1250px) {
+    .projectdetailsphotoblock {
+        display: flex;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    .projectdetailsphotoblock-photo-block {
+        margin: 0 30px;
+        width: 100%;
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .projectdetailsphotoblock-photo-block {
+        width: 100%;
+        height: 450px;
+        border-radius: 30px;
+    }
+
+    .projectdetailsphotoblock-photo-block-svg {
+        width: 90px;
+        height: 90px;
+        top: calc(50% - 50px);
+        left: calc(50% - 40px);
+    }
+    .projectdetailsphotoblock-photo-block-svg svg {
+        top: 30%;
+        left: 31%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projectdetailsphotoblock {
+        margin-bottom: 50px;
+    }
+    .projectdetailsphotoblock-photo-block {
+        margin: 0 15px;
+        width: 100%;
+        height: 350px;
+        border-radius: 15px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .projectdetailsphotoblock-photo-block {
+        height: 300px;
+    }
+
+    .projectdetailsphotoblock-photo-block-svg {
+        width: 80px;
+        height: 80px;
+        top: calc(50% - 40px);
+        left: calc(50% - 40px);
+    }
+    .projectdetailsphotoblock-photo-block-svg svg {
+        top: 28%;
+        left: 28%;
+    }
+}
+@media screen and (max-width: 450px) {
+    .projectdetailsphotoblock-photo-block {
+        height: 200px;
+    }
 }

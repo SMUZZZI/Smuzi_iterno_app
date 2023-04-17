@@ -2,7 +2,7 @@
     margin: 0 auto;
     margin-bottom: 200px;
     
-    width: 1036px;
+    max-width: 1036px;
 
 }
 
@@ -14,4 +14,26 @@
 .points-line{
     height: 249px;
     border: 1px solid #CECECE;
+}
+
+@media screen and (max-width: 1250px) {
+    .points{
+        margin: 0 30px;
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .points{
+        margin: 0 15px;
+        margin-bottom: 50px;
+    }
+    .points-line {
+        display: none;
+    }
+}
+@media screen and (max-width: 550px) {
+    .points-list{
+        justify-content: space-around;
+    }
 }

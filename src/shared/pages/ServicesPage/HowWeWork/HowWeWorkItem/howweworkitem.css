@@ -1,37 +1,41 @@
-.howwework-item{
+.howwework-item {
     margin-bottom: 70px;
     display: flex;
     width: 967px;
     justify-content: space-between;
 }
-.howwework-item:nth-child(2n){
+
+.howwework-item:nth-child(2n) {
     flex-direction: row-reverse;
 }
-.howwework-item:last-child{
+
+.howwework-item:last-child {
     margin: 0;
 }
 
 
-.howwework-item-bg{
+.howwework-item-bg {
     width: 453px;
     height: 485px;
 
-    border-radius:  0px 123px 0 326.5px;
+    border-radius: 0px 123px 0 326.5px;
     object-fit: cover;
 }
 
 
-.howwework-item-content{
+.howwework-item-content {
     width: 456px;
 }
-.howwework-item-img-block{
+
+.howwework-item-img-block {
     margin-bottom: 58px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.howwework-item-img-block-image{
+
+.howwework-item-img-block-image {
     width: 100px;
     height: 100px;
     background-repeat: no-repeat;
@@ -39,7 +43,7 @@
     background-position: center center;
 }
 
-.howwework-item-img-block-number{
+.howwework-item-img-block-number {
     font-weight: 400;
     font-size: 120px;
     line-height: 125%;
@@ -47,7 +51,7 @@
     color: #fff;
 }
 
-.howwework-item-title{
+.howwework-item-title {
     margin-bottom: 11px;
 
     font-weight: 400;
@@ -55,3 +59,66 @@
     line-height: 125%;
 }
 
+@media screen and (max-width: 1250px) {}
+
+@media screen and (max-width: 1024px) {
+    .howwework-item {
+        margin: 0 auto;
+        margin-bottom: 50px;
+        width: 90%;
+        flex-direction: column-reverse;
+    }
+    .howwework-item:nth-child(2n) {
+        flex-direction: column-reverse;
+    }
+    .howwework-item:last-child {
+        margin: 0 auto;
+    }
+
+    .howwework-item-bg {
+        width: 100%;
+        height: 200px;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .howwework-item-content {
+        width: 100%;
+    }
+
+    .howwework-item-title {
+        font-size: 25px;
+    }
+
+    .howwework-item-p {
+        margin-bottom: 20px;
+    }
+
+    .howwework-item-img-block {
+        margin-bottom: 20px;
+    }
+
+    .howwework-item-img-block-image {
+        width: 60px;
+    }
+
+    .howwework-item-img-block-number {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .howwework-item {
+        margin-bottom: 30px;
+    }
+    .howwework-item-title {
+        font-size: 18px;
+    }
+
+    .howwework-item-img-block-image {
+        width: 50px;
+    }
+    .howwework-item-img-block-number {
+        font-size: 70px;
+    }
+}

@@ -5,9 +5,7 @@ import ProjectListItem from './ProjectListItem/ProjectListItem';
 function ProjectList({ currentPosts }) {
     return (
         <section className='projectlist'>
-            <div className='projectlist-block'>
                 <ProjectListItem data={currentPosts} />
-            </div>
         </section>
     )
 

@@ -12,6 +12,36 @@
 .howwework-service-p{
     margin-bottom: 100px;
 
-    width: 802px;
+    max-width: 802px;
     text-align: center;    
 }
+
+@media screen and (max-width: 1250px) {
+    .howwework-service{
+        margin-bottom: 100px;
+        padding: 100px 0;
+        border-radius: 0;
+    }
+    
+    .howwework-service-p{
+        margin-bottom: 50px; 
+    }
+}
+  
+  @media screen and (max-width: 1024px) {
+    .howwework-service{
+        margin-bottom: 50px;
+        padding: 50px 0;
+        width: 100%;
+    }   
+    .howwework-service-list {
+        width: 90%;
+    }
+    .howwework-service-p{
+        margin-bottom: 50px;  
+    }
+}
+  
+  /* @media screen and (max-width: 768px) {
+
+} */

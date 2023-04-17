@@ -22,7 +22,7 @@ const background = {
 function ServiceSingle() {
     const location = useLocation();
     const Data = location.state;
-
+    console.log(Data);
     return (
         <main className='servicesingle'>
             <Banner background={background} />

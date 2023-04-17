@@ -16,16 +16,17 @@
     justify-content: center;
     align-items: center;
 }
-.pagination-item:last-child{
+
+.pagination-item:last-child {
     margin-right: 0;
 }
 
-.pagination-item:hover .pagination-link{
+.pagination-item:hover .pagination-link {
     background-color: #CDA274;
     border: none;
     color: #fff;
-    fill: currentColor; 
-} 
+    fill: currentColor;
+}
 
 .pagination-item-current .pagination-link {
     background-color: #F4F0EC;
@@ -74,4 +75,16 @@
 
 .pagination-item-active {
     display: block;
+}
+
+@media screen and (max-width: 1250px) {
+    .pagination-block {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pagination-block {
+        margin-bottom: 50px;
+    }
 }

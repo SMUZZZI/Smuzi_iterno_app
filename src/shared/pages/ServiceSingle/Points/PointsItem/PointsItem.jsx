@@ -16,7 +16,7 @@ function PointsItem({ data }) {
 
     return (
         <li className='pointsitem'>
-            <h2 className='pointsitem-title'>{data.title}</h2>
+            <h2 className='title-h3 pointsitem-title'>{data.title}</h2>
             <ul className='pointsitem-list'>
                 {result}
             </ul>

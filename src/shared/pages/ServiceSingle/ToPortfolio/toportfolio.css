@@ -9,13 +9,14 @@
 .toportfolio-img {
     width: 600px;
     height: 377px;
+    margin-right: 30px;
 
     background-image: url(../img/servicesinglePortfolio.jpg);
 
     border-radius: 70px;
 }
 
-.toportfolio-content{
+.toportfolio-content {
     width: 518px;
 }
 
@@ -27,8 +28,42 @@
     margin-bottom: 64px;
 }
 
-.toportfolio-link{
+.toportfolio-link {
     padding: 26px 40px;
     padding-right: 65px;
     box-shadow: 0px 10px 20px rgba(192, 192, 192, 0.35);
+}
+
+@media screen and (max-width: 1250px) {
+    .toportfolio {
+        margin: 0 30px;
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .toportfolio-link svg {
+        top: 26px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .toportfolio {
+        flex-direction: column;
+        margin: 0 15px;
+        margin-bottom: 80px;
+    }
+    .toportfolio-img {
+        width: 100%;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        border-radius: 30px;
+    }
+    .toportfolio-content {
+        width: 100%;
+    }
+    .toportfolio-p {
+        margin-bottom: 40px;
+    }
 }

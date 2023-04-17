@@ -1,5 +1,7 @@
 .videoplayer-container {
+    margin: 0 30px;
     margin-bottom: 200px;
+
 
     background-color: #f9f9f9;
 
@@ -9,5 +11,25 @@
 }
 
 .videoplayer {
-    object-fit: fill;
+    
+    width: 1024px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+    .videoplayer-container {
+        margin: 0 15px;
+        margin-bottom: 50px;
+        border-radius: 30px;
+    }
+    .videoplayer {
+        height: 250px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .videoplayer {
+        height: 200px;
+    }
 }

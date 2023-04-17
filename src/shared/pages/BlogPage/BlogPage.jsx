@@ -16,6 +16,7 @@ import Error from '../subPages/Error/Error';
 import { paginationSet } from '../../slices/pagination';
 import { useNavigate, useParams } from 'react-router-dom';
 
+
 const background = {
     name: "Articles & News",
     tag: "Home / Blog",

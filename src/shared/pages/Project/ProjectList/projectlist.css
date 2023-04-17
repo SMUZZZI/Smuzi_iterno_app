@@ -1,7 +1,18 @@
-.projectlist{
+.projectlist {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 200px;
 }
-.projectlist-block{
-    display: flex;
-    justify-content: space-between;
+
+@media screen and (max-width: 1250px) {
+    .projectlist {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projectlist {
+        margin-bottom: 50px;
+    }
 }

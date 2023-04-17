@@ -11,7 +11,7 @@
 
 .projectDetailsInfoItem {
     padding: 55px 84px;
-
+    margin-right: 30px;
     display: flex;
 
     background-color: #F4F0EC;
@@ -54,4 +54,42 @@
 
 .projectDetailsInfoItemLink p:hover {
     color: #CDA274;
+}
+
+@media screen and (max-width: 1250px) {
+    .projectDetailsList {
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .projectDetailsTextBlock {
+        margin-bottom: 50px;
+    }
+
+    .projectDetailsInfoItem {
+        padding: 40px 40px;
+        border-radius: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projectDetailsList {
+        margin: 0 15px;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .projectDetailsTextItem {
+        width: 100%;
+    }
+
+    .projectDetailsInfoItem {
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+
+    .projectDetailsInfoTitleItem {
+        margin-bottom: 20px;
+    }
 }

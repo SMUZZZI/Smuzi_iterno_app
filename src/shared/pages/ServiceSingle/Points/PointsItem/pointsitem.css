@@ -1,8 +1,3 @@
-.pointsitem-title {
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 125%;
-}
 
 .pointsitem-item {
     display: flex;
@@ -21,4 +16,41 @@
 
 .pointsitem-p {
     line-height: 270%;
+}
+
+@media screen and (max-width: 1250px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    .pointsitem-title {
+        margin-bottom: 20px;
+    }
+    .pointsitem-num {
+        margin-right: 15px;
+    
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 125%;
+    
+        color: #CDA274;
+    }
+    .pointsitem-p {
+        line-height: 150%;
+    }
+    .pointsitem-item {
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .pointsitem-title {
+        width: 100px;
+    }
+    .pointsitem-p {
+        width: 100px;
+    }
 }

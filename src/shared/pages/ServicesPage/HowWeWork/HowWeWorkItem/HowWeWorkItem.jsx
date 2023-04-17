@@ -17,7 +17,7 @@ function HowWeWorkItem({data}) {
                 </div>
                 <div className='howwework-item-text-block'>
                     <h2 className='howwework-item-title'>{data.title}</h2>
-                    <p className='p-black-gray'>{data.text}</p>
+                    <p className='p-black-gray howwework-item-p'>{data.text}</p>
                 </div>
             </div>
         </li>
