@@ -59,10 +59,12 @@
 
     transition: color .1s ease-in-out;
 }
-.teammemberdetail-links:hover{
+
+.teammemberdetail-links:hover {
     color: #CDA274;
 }
-.teammemberdetail-links svg{
+
+.teammemberdetail-links svg {
     margin-right: 15px;
 }
 
@@ -70,12 +72,86 @@
     margin-bottom: 0;
 }
 
-
-
-
-
-.teammemberdetail-social{
+.teammemberdetail-social {
     margin-right: 35px;
-}.teammemberdetail-social:last-child{
+}
+
+.teammemberdetail-social:last-child {
     margin-right: 0;
+}
+
+@media screen and (max-width: 1250px) {
+    .teammemberdetail {
+        margin: 0 30px;
+        margin-bottom: 100px;
+    }
+
+    .teammemberdetail-img-block {
+        width: 590px;
+        height: 600px;
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .teammemberdetail {
+        margin-bottom: 50px;
+    }
+
+    .teammemberdetail-img-block {
+        width: 590px;
+        height: 550px;
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .teammemberdetail {
+        margin: 0 15px;
+        margin-bottom: 50px;
+    }
+    .teammemberdetail-img-block {
+        width: 100%;
+        height: 400px;
+        margin-right: 15px;
+        border-radius: 30px;
+    }
+    .teammemberdetail-text-block {
+        width: 100%;
+    }
+    .teammemberdetail-des {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .teammemberdetail-links {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .teammemberdetail {
+        flex-direction: column;
+    }
+    .teammemberdetail-img-block {
+        width: 100%;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+    .teammemberdetail-text-block {
+        width: 100%;
+    }
+    .teammemberdetail-des {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+    .teammemberdetail-links-block {
+        margin-bottom: 20px;
+    }
+    .teammemberdetail-links {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
 }

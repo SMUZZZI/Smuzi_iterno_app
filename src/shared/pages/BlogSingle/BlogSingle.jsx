@@ -3,12 +3,12 @@ import axios from "../../actions/axios";
 import { useParams } from 'react-router-dom';
 
 import Banner from '../subPages/Banner/Banner'
-import "./blogsingle.css"
 import BlogSingleMain from './BlogSingleMain/BlogSingleMain'
 import DesignSprints from './DesignSprints/DesignSprints'
 import LeaveReply from './LeaveReply/LeaveReply'
 import BlogSingleAside from './BlogSingleAside/BlogSingleAside'
 
+import "./blogsingle.css"
  
 import backgroundImg from "./img/blogSingleBanner.jpg"
 const background = {

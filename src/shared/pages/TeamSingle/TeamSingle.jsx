@@ -7,11 +7,12 @@ import TeamMemberDetail from './TeamMemberDetail/TeamMemberDetail'
 import TeamBiography from './TeamBiography/TeamBiography';
 import AboutUsTeam from '../subPages/AboutUsTeam/AboutUsTeam';
 import TeamMail from './TeamMail/TeamMail';
-import "./teamsingle.css"
 import axios from "../../actions/axios";
 import { fetchTeam } from '../../slices/team';
 import TeamPageListBlank from '../subPages/TeamPageListBlank/TeamPageListBlank';
 import Error from '../subPages/Error/Error';
+
+import "./teamsingle.css"
 
 import backgroundImg from "./img/teamsingleBanner.jpg"
 const background = {

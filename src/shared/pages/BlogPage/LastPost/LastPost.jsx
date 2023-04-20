@@ -18,7 +18,7 @@ function LastPost({ data }) {
                     <p className='lastpost-text-post p-black-gray'>{data.text.slice(0, 30)}...</p>
                     <div className="lastpost-tag-btn-block">
                         <p className='lastpost-date'>{date}</p>
-                        <Link to={`/blog/${data._id}`} state={data._id} className="lastpost-blog-btn"
+                        <Link to={`/blog/id=/${data._id}`} state={data._id} className="lastpost-blog-btn"
                             onClick={() => {
                                 window.scrollTo(0, 0);
                             }}

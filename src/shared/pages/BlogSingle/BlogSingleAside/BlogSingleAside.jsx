@@ -22,11 +22,7 @@ function BlogSingleAside({ Tags }) {
     }, []);
 
     return (
-        <>
-            <form action="#" method="post" className='blogsingleaside-form'>
-                <input type="text" name="search" id="search" className='blogsingleaside-search' placeholder='Search' />
-                <input type="submit" value=" " className='blogsingleaside-search-ico' />
-            </form>
+        <section className='blogsingleaside'>
             <h3 className='blogsingleaside-title title-h3'>Latest News</h3>
             <ul className='blogsingleaside-news'>
                 {
@@ -59,7 +55,7 @@ function BlogSingleAside({ Tags }) {
                     ))}
                 </ul>
             </div>
-        </>
+        </section>
     )
 }
 

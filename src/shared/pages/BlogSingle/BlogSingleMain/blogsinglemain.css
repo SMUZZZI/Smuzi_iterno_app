@@ -4,13 +4,14 @@
 
 .blogsinglemain-title {
     margin-bottom: 21px;
+    width: 100%;
     word-wrap: break-word;
 }
 
 .blogsinglemain-img-block {
     margin-bottom: 46px;
 
-    width: 804px;
+    width: 100%;
     height: 539px;
 
     background: #C4C4C4;
@@ -34,10 +35,36 @@
 }
 
 .blogsinglemain-tag-p {
-    word-wrap: break-word;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
-
+    
     color: #4D5053;
+    word-wrap: break-word;
+}
+.blogsinglemain-main-p {
+    word-wrap: break-word;
+}
+
+
+@media screen and (max-width: 1250px) {
+    .blogsinglemain-title {
+        width: 100%;
+    }
+    .blogsinglemain-img-block {
+        margin-bottom: 30px;
+        max-width: 100%;
+        height: 500px;
+    }
+    .blogsinglemain-tags {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blogsinglemain-img-block {
+        margin-bottom: 30px;
+        max-width: 100%;
+        height: 200px;
+    }
 }

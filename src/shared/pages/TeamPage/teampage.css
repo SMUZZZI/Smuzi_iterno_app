@@ -1,3 +1,15 @@
-.teampage{
+.teampage {
     margin-bottom: 200px;
+}
+
+@media screen and (max-width: 1250px) {
+    .teampage {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .teampage {
+        margin-bottom: 50px;
+    }
 }

@@ -12,15 +12,17 @@ function HeaderNavigation() {
     const [btnState, setBtnState] = useState(false);
     function pagesClick() {
         setBtnState(btnState => !btnState);
-
     }
     let toggleClassCheck = btnState ? " link-active": "";
 
+    const resetBtn = () => {
+        setBtnState(false)
+    }
     return (
         <nav className="headerNav">
             <ul className="headerNavList">
                 <li className="headerNavItem">
-                    <Link to="/">Home</Link>
+                    <Link onClick={resetBtn} to="/">Home</Link>
                 </li>
                 <li className="headerNavItem">
                     <a onClick={pagesClick} className={`link${toggleClassCheck}`}>Pages
@@ -30,16 +32,16 @@ function HeaderNavigation() {
                     </a>
                 </li>
                 <li className="headerNavItem">
-                    <Link to="/services">Services</Link>
+                    <Link onClick={resetBtn} to="/services">Services</Link>
                 </li>
                 <li className="headerNavItem">
-                    <Link to="/project/bathroom/1">Project</Link>
+                    <Link onClick={resetBtn} to="/project/bathroom/1">Project</Link>
                 </li>
                 <li className="headerNavItem">
-                    <Link to="/blog/1">Blog</Link>
+                    <Link onClick={resetBtn} to="/blog/1">Blog</Link>
                 </li>
                 <li className="headerNavItem">
-                    <Link to="/contactus">Contact</Link>
+                    <Link onClick={resetBtn} to="/contactus">Contact</Link>
                 </li>
             </ul>
         </nav>

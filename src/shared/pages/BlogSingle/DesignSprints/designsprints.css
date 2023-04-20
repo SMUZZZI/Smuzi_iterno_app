@@ -1,4 +1,4 @@
-.designsprints{
+.designsprints {
     margin-bottom: 100px;
 }
 
@@ -9,7 +9,7 @@
 .designsprints-list {
     margin-top: 24px;
 
-    width: 732px;
+    width: 100%;
 }
 
 .designsprints-list-item-num {
@@ -34,14 +34,14 @@
     margin-bottom: 44px;
 }
 
-.designsprints-text{
+.designsprints-text {
     word-wrap: break-word;
 }
 
 .designsprints-img-block {
     margin-bottom: 35px;
 
-    width: 804px;
+    width: 100%;
     height: 365px;
 
     overflow: hidden;
@@ -50,7 +50,24 @@
 .designsprints-img {
     width: 100%;
     height: 100%;
-
+    object-fit: cover;
     background: #C4C4C4;
     border-radius: 50px;
+}
+
+@media screen and (max-width: 1250px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+    .designsprints {
+        width: calc(100vw - 70px);
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .designsprints {
+        width: 100%;
+    }
 }

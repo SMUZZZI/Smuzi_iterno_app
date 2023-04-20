@@ -4,7 +4,7 @@ import "./leavereply.css"
 
 function LeaveReply() {
     return (
-        <>
+        <section className='leavereply-main'>
             <h3 className='leavereply-title'>Leave a Reply</h3>
             <form action="/" method="post" className='leavereply'>
                 <div className='leavereply-input-block'>
@@ -27,7 +27,7 @@ function LeaveReply() {
                     </button>
                 </div>
             </form>
-        </>
+        </section>
     )
 }
 

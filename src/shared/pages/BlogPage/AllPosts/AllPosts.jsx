@@ -22,7 +22,7 @@ function AllPosts({ currentPosts }) {
 
                                 <div className="allposts-blog-date-block">
                                     <p className="allposts-blog-date">{i.updatedAt.slice(0, 10)}</p>
-                                    <Link to={`/blog/${i._id}`} state={i._id} className="blog-btn"
+                                    <Link to={`/blog/id=/${i._id}`} state={i._id} className="blog-btn"
                                         onClick={() => {
                                             window.scrollTo(0, 0);
                                         }}

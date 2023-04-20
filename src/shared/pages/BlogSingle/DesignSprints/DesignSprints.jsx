@@ -25,7 +25,7 @@ function DesignSprints({Data}) {
             {ulResult}
         </ul>
         <div className='designsprints-img-block'>
-            <img src={`http://localhost:5000${data.img}`} className="designsprints-img"/>
+            <img src={`http://45.146.166.237:5000${data.img}`} className="designsprints-img"/>
         </div>
         <p className='p-black-gray esignsprints-text'>{data.secondText}</p>
     </section>

@@ -16,7 +16,7 @@ function BlogItem({ blogCard }) {
 
                 <div className="blog-date-block">
                     <p className="blog-date">{blogCard.updatedAt.slice(0, 10)}</p>
-                    <Link to={`/blog/${blogCard._id}`} className="blog-btn"
+                    <Link to={`/blog/id=/${blogCard._id}`} className="blog-btn"
                         onClick={() => {
                             window.scrollTo(0, 0);
                         }}
