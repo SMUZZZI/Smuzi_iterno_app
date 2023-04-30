@@ -53,7 +53,7 @@ function AdminProject() {
                 {
                   projectData.items.map(i => (
                     <li key={i._id} className="adminproject-item">
-                      <img src={`http://localhost:5000${i.img}`} alt={`img ${i._id}`} className="adminproject-img" />
+                      <img src={`http://45.146.166.237:5000${i.img}`} alt={`img ${i._id}`} className="adminproject-img" />
                       <h2 className='adminproject-title title-h3'>{i.title}</h2>
                       <p className='adminproject-id p-black-gray'>{i.projectid}</p>
                       <div className='adminproject-link-block'>

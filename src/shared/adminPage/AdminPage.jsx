@@ -12,9 +12,8 @@ function AdminPage() {
   const isAuth = useSelector(selectIsAuth)
 
   if (!window.localStorage.getItem("token") && !isAuth) {
-    <Navigate to="/"/>
+    return <Navigate to="/"/>
   }
-  
   
   return (
     <main className='admin-page'>
