@@ -12,7 +12,7 @@ function BlogSingleAside({ Tags }) {
     useEffect(() => {
         axios.get(`/api/blog/3/1`)
             .then(res => {
-                setData(res);
+                setData(res.data);
                 setIsLoading(false)
             })
             .catch(err => {
@@ -20,6 +20,7 @@ function BlogSingleAside({ Tags }) {
                 alert("Ошибка при получении блога")
             })
     }, []);
+
 
     return (
         <section className='blogsingleaside'>
@@ -30,9 +31,9 @@ function BlogSingleAside({ Tags }) {
                         <div>Loading...</div>
                         :
                         <>
-                            {data.data.map(item => (
+                            {data.map(item => (
                                 <li key={item._id} className="blogsingleaside-news-item">
-                                    <Link to={`/blog/${item._id}`} className="blogsingleaside-news-item-link"
+                                    <Link to={`/blog/id=/${item._id}`} className="blogsingleaside-news-item-link"
                                         onClick={() => {
                                             window.scrollTo(0, 0);
                                         }}

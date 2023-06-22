@@ -14,22 +14,22 @@ function FooterNavServices() {
                 <h3 className="footernavservices-item-title">Services</h3>
             </li>
             <li className="footernavservices-item">
-                <Link to="/project/kitchan"onClick={() =>{
+                <Link to="/project/kitchan/1"onClick={() =>{
                     window.scrollTo(0, 0);
                 }} className="footernavservices-item-p">Kitchan</Link>
             </li>
             <li className="footernavservices-item">
-                <Link to="/project/bathroom"onClick={() =>{
+                <Link to="/project/bathroom/1"onClick={() =>{
                     window.scrollTo(0, 0);
                 }} className="footernavservices-item-p">Bathroom</Link>
             </li>
             <li className="footernavservices-item">
-                <Link to="/project/bedroom"onClick={() =>{
+                <Link to="/project/bedroom/1"onClick={() =>{
                     window.scrollTo(0, 0);
                 }} className="footernavservices-item-p">Bedroom</Link>
             </li>
             <li className="footernavservices-item">
-                <Link to="/project/livingroom"onClick={() =>{
+                <Link to="/project/livingroom/1"onClick={() =>{
                     window.scrollTo(0, 0);
                 }} className="footernavservices-item-p">Living Area</Link>
             </li>

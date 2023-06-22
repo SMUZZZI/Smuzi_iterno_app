@@ -30,7 +30,7 @@ function AdminLogin() {
     }
     }
 
-    if (isAuth) {
+    if (isAuth) { 
         return <Navigate to="/admin" />
     }
 

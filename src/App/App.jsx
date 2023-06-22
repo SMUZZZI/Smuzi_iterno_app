@@ -25,6 +25,7 @@ const AdminBlogNew = React.lazy(() => import("../shared/adminPage/AdminBlog/Admi
 const AdminBlogEdit = React.lazy(() => import("../shared/adminPage/AdminBlog/AdminBlogEdit/AdminBlogEdit"))
 const AdminTeamNew = React.lazy(() => import("../shared/adminPage/AdminTeam/AdminTeamNew/AdminTeamNew"))
 const AdminTeamEdit = React.lazy(() => import("../shared/adminPage/AdminTeam/AdminTeamEdit/AdminTeamEdit"))
+const SearchPage = React.lazy(() => import("../shared/pages/SearchPage/SearchPage"))
 
 function App() {
 
@@ -57,6 +58,7 @@ function App() {
             <Route path="/admin/blog/:id/edit" element={<AdminBlogEdit />} />
             <Route path="/admin/team/new" element={<AdminTeamNew />} />
             <Route path="/admin/team/:id/edit" element={<AdminTeamEdit />} />
+            <Route path="/search" element={<SearchPage />} />
           </Routes>
           <Footer />
         </Suspense>

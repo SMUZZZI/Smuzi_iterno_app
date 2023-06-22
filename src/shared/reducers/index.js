@@ -4,6 +4,7 @@ import { blogLimitReducer, blogReducer } from '../slices/blog'
 import { paginationReducer } from '../slices/pagination'
 import { projectLimitReducer, projectReducer } from '../slices/project'
 import { teamReducer } from '../slices/team'
+import { searchReducer } from '../slices/search'
 
 const store = configureStore({
     reducer: {
@@ -13,7 +14,8 @@ const store = configureStore({
         projectLimit: projectLimitReducer,
         team: teamReducer,
         auth: authReducer,
-        pagination: paginationReducer
+        pagination: paginationReducer,
+        search: searchReducer
     },
 })
 
