@@ -6,7 +6,7 @@ import { Link, Navigate } from 'react-router-dom'
 
 function SearchPage() {
     const data = useSelector(state => state.search)
-    if (data.length == 0) {
+    if (data.length === 0) {
         return <Navigate to="/" />
     }
     return (

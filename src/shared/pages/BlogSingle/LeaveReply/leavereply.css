@@ -98,3 +98,27 @@
         height: 30px;
     }
 }
+@media screen and (max-width: 360px) {
+    .leavereply-input-block {
+        margin-top: 10px;
+    }
+    .leavereply-main {
+        margin: 0 auto;
+        width: 300px;
+    }
+    .leavereply-input {
+        width: 100px;
+        height: 25px;
+        margin-bottom: 30px;
+    }
+    .leavereply-input::placeholder {
+        font-size: 15px;
+    }
+    .leavereply-input-comment {
+        height: 130px;
+        margin-bottom: 30px;
+    }
+    .leavereply-input-comment::placeholder{
+        font-size: 15px;
+    }
+}

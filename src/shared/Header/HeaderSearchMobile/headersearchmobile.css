@@ -1,0 +1,149 @@
+.headersearchmobile {
+    position: relative;
+}
+
+.headersearchmobile-enable-btn {
+    display: none;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.headersearchmobile-form {
+    display: none;
+}
+
+.headersearchmobile-input {
+    border: none;
+    border-radius: 30px;
+    width: 250px;
+    padding: 15px 20px;
+    padding-right: 60px;
+    background-color: #F4F0EC;
+}
+
+.headersearchmobile-btn {
+    position: absolute;
+    right: 13px;
+    top: 9px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.headersearchmobile-btn svg {
+    color: #141414;
+}
+
+.headersearchmobile-btn:hover svg {
+    color: #CDA274;
+}
+
+.headersearchmobile-list {
+    display: none;
+    position: absolute;
+    top: 48px;
+
+    padding: 40px;
+    width: 250px;
+
+    border-radius: 20px;
+    background-color: #fff;
+
+    z-index: 2000;
+}
+
+.headersearchmobile-list-active {
+    display: block;
+}
+
+.headersearchmobile-item {
+    margin-bottom: 20px;
+}
+
+.headersearchmobile-item:last-child {
+    margin-bottom: 0;
+}
+
+.headersearchmobile-item a {
+    color: #222;
+    font-size: 16px;
+}
+
+.headersearchmobile-item:hover a {
+    color: #CDA274;
+}
+
+@media screen and (max-width: 1000px) {
+    .headersearchmobile-enable-btn {
+        display: block;
+        right: 0;
+        top: -13px;
+    }
+
+    .headersearchmobile-form-active {
+        position: absolute;
+        top: -18px;
+        right: -13px;
+        display: block;
+    }
+
+    .headersearchmobile-input {
+        width: 200px;
+        padding: 11px 15px;
+        padding-right: 50px;
+    }
+
+    .headersearchmobile-btn {
+        top: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .headersearchmobile-enable-btn {
+        top: -23px;
+    }
+
+    .headersearchmobile-form-active {
+        position: absolute;
+        top: -29px;
+        right: -13px;
+        display: block;
+    }
+
+    .headersearchmobile-input {
+        width: 200px;
+        padding: 11px 15px;
+        padding-right: 50px;
+    }
+
+    .headersearchmobile-btn {
+        top: 5px;
+    }
+    .headersearchmobile-list {
+        border-radius: 0;
+        width: calc(100vw - 80px);
+        right: -17px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .headersearchmobile-form-active {
+        position: absolute;
+        top: -29px;
+        right: -13px;
+        display: block;
+    }
+
+    .headersearchmobile-input {
+        width: calc(65vw - 50px);
+        padding: 11px 15px;
+        padding-right: 50px;
+    }
+
+    .headersearchmobile-btn {
+        top: 5px;
+    }
+}

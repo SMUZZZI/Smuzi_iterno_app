@@ -35,6 +35,8 @@ function HeaderSearch() {
     const [data, setData] = useState([])
     const [searchWord, setSearchWord] = useState('')
 
+    const searchLink = searchWord !== ''? '/search' : '/#'
+
     useEffect(() => {
         const timeOut = setTimeout(() => {
             const filtredData = searchData(searchWord, [...blogData.items, ...projectData.items])
@@ -47,9 +49,8 @@ function HeaderSearch() {
         <section className='headersearch'>
             <form>
                 <input type="text" placeholder='Search' className='headersearch-input' value={searchWord} onChange={e => setSearchWord(e.target.value)} />
-
             </form>
-            <Link to='/search'>
+            <Link to={searchLink}>
                 <button className='headersearch-btn' onClick={() => {
                     dispath(searchSet(data))
                     setSearchWord('')

@@ -19,6 +19,7 @@
     background-color: transparent;
     cursor: pointer;
 }
+
 .headersearch-btn svg {
     color: #141414;
 }
@@ -37,9 +38,10 @@
 
     border-radius: 20px;
     background-color: #fff;
-   
+
     z-index: 2000;
 }
+
 .headersearch-list-active {
     display: block;
 }
@@ -47,9 +49,11 @@
 .headersearch-item {
     margin-bottom: 20px;
 }
+
 .headersearch-item:last-child {
     margin-bottom: 0;
 }
+
 .headersearch-item a {
     color: #222;
     font-size: 16px;
@@ -57,4 +61,22 @@
 
 .headersearch-item:hover a {
     color: #CDA274;
-} 
+}
+
+@media screen and (max-width: 1250px) {
+    .headersearch-input {
+        width: 200px;
+        padding: 11px 15px;
+        padding-right: 50px;
+    }
+
+    .headersearch-btn {
+        top: 5px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .headersearch {
+        display: none;
+    }
+}
